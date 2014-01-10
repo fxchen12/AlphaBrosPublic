@@ -1,0 +1,5 @@
+1. Clean - Not busy, just enough information displayed.
+2. Easy to navigate - not a lot of menus or things to read. Should feel natural to navigate without a lot of clicking or searching.
+3. Modern - Let's stay away from the 2000's (ex: bodybuilder.com). I'm feeling something html5 style, but not too in your face. Too many fullscreen pages make me feel claustrophobic. I guess we need to find a comfortable mix.
+4. The fewer pages the better. (with the exception of the searchable tutorial and workout pages). 
+5. Someone should be able to bookmark one page and have it be the central hub. I want some page to be the "dashboard" so to speak.
