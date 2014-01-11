@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  distance: 9.99
+  duration: 2014-01-10 15:06:22
+  reps: 1
+  notes: MyText
+  type: 
+
+two:
+  name: MyString
+  distance: 9.99
+  duration: 2014-01-10 15:06:22
+  reps: 1
+  notes: MyText
+  type: 
