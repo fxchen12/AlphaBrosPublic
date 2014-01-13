@@ -28,44 +28,14 @@ Site Design
 -----------
 1. Three hand drawn designs are in the repository.
 
-2. Comments below.
-Francis's:
-Pros:
--Colorful icons next to workouts?
--Visual graph button isn't shabby
--Easy to see workouts that you've done
--Seems simple to implement
-
-Cons:
--Nav bar too basic, ill suited for mouse navigation
--Center of page is six cookie-cutter buttons
--Inconsistent fonts
-
-Keanu's:
-Pros:
--Simple, graphical
--Quote aesthetics
--Visually appealing
-
-Cons:
--Settings/Logout
--Lots of empty/white space
--Difficult to polish
-
-Austin's
-Pros:
--Lots of data displayed immediately
--Easy access to timer
--Things are drawn out, not just text
-
-Cons:
--Clunky banner front/center
--Circles on top bar
--Doesn't direct focus well
-
-
-Suggestions for final page design:
--Lightweight nav bar, finely tuned to feel right.
+2. Comments below.  
+Francis's pros: visual graph button isn't shabby, easy to see workouts that you've done, seems simple to implement.
+Cons: Nav bar too basic, ill suited for mouse navigation, center of page is six cookie-cutter buttons, inconsistent fonts.  
+Keanu's pros: simple, graphical, quote aesthetics, visually appealing.
+Cons: Settings/Logout, lots of empty/white space, difficult to polish.  
+Austin's pros: lots of data displayed immediately, easy access to timer, things are drawn out, not just text.
+Cons: Clunky banner front/center, circles on top bar, doesn't direct focus well.  
+Suggestions for final page design: lightweight nav bar, finely tuned to feel right.
 
 3. Mockup drawn in PowerPoint. PPT and PNG in repository.
 
