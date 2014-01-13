@@ -26,6 +26,48 @@ g. User confirms details, server saves workout history to database and returns u
 
 Site Design
 -----------
+1. Three hand drawn designs are in the repository.
+
+2. Comments below.
+Francis's:
+Pros:
+-Colorful icons next to workouts?
+-Visual graph button isn't shabby
+-Easy to see workouts that you've done
+-Seems simple to implement
+
+Cons:
+-Nav bar too basic, ill suited for mouse navigation
+-Center of page is six cookie-cutter buttons
+-Inconsistent fonts
+
+Keanu's:
+Pros:
+-Simple, graphical
+-Quote aesthetics
+-Visually appealing
+
+Cons:
+-Settings/Logout
+-Lots of empty/white space
+-Difficult to polish
+
+Austin's
+Pros:
+-Lots of data displayed immediately
+-Easy access to timer
+-Things are drawn out, not just text
+
+Cons:
+-Clunky banner front/center
+-Circles on top bar
+-Doesn't direct focus well
+
+
+Suggestions for final page design:
+-Lightweight nav bar, finely tuned to feel right.
+
+3. Mockup drawn in PowerPoint. PPT and PNG in repository.
 
 Minimal Viable Product
 ----------------------
