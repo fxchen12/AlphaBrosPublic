@@ -7,8 +7,8 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            # Yay! successful!
-            redirect_to root
+            flash[:success] = "Your account has been created!"
+            redirect_to '/workouts'
         else
             # Boooooo
             render :new
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         if @user.update(update_params)
             # Yay!
-            redirect_to root
+            redirect_to '/workouts'
         else
             # Boooo
             render :edit

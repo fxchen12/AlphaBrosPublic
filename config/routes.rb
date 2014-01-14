@@ -14,6 +14,7 @@ Work6470::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   resources :users
+  resources :workouts
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
