@@ -11,7 +11,7 @@ $(function() {
             ++quoteIndex;
             quotes.eq(quoteIndex % quotes.length)
                 .fadeIn(1000)
-                .delay(5000)
+                .delay(8000)
                 .fadeOut(1000, showNextQuote);
         }
 

@@ -1,11 +1,24 @@
 <% quotes = [
 
-"'Awesome Quotation Here' - Austin Fathman",
-"'Haha, GAYYYYY' - Logan Mercer",
-"'Daaaaaaamn' - Keanu Delgado"
+"'You want me to do something... tell me I can't do it.' - Maya Angelou",
+"'You live longer once you realize that any time spent being unhappy is wasted.' - Ruth E. Renkl",
+"'Strength does not come from physical capacity. It comes from an indomitable will.' - Mahatma Gandhi",
+"'Ability is what you're capable of doing. Motivation determines what you do. Attitude determines how well you do it.' - Lou Holtz",
+"'Motivation is what gets you started. Habit is what keeps you going.' - Jim Ryan",
+"'Never put off till tomorrow what may be done day after tomorrow just as well.' - Mark Twain",
+"'Take care of your body. It's the only place you have to live.' - Jim Rohn",
+"'The first wealth is health.' - Ralph Waldo Emerson",
+"'Adventure is worthwhile in itself.' - Amelia Earhart",
+"'He who has health, has hope; and he who has hope, has everything.' - Thomas Carlyle",
+"'If a man achieves victory over this body, who in the world can exercise power over him? He who rules himself rules over the whole world.' - Vinoba Bhave",
+"'Do not despise the bottom rungs in the ascent to greatness.' - Publilius Syrus",
+"'Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.' - St. Francis of Assisi",
+"'All glory comes from daring to begin' - Eugene Ware",
+"'The distance is nothing; it's only the first step that is difficult.' - Marquise du Deffand",
+"'A journey of a thousand miles must begin with a single step.' - Lao Tsu"
 
 ] %>
 
-<% quotes.each do |q| %>
+<% quotes.shuffle.each do |q| %>
     <p class="quotes"><em><%= q %></em></p>
 <% end %>
