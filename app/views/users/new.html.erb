@@ -1,3 +1,75 @@
+<!-- Header -->
+    <section id="header" class="dark">
+        <header>
+            <h1>Journey</h1>
+
+            <!-- TODO: iterate these from somewhere -->
+            <p class="quotes"><em>'Awesome Quotation Here</em>' - <em>Austin Fathman</em></p>
+            <p class="quotes"><em>'Haha, GAYYYYY</em>' - <em>Logan Mercer</em></p>
+            <p class="quotes"><em>'Daaaaaaamn</em>' - <em>Keanu Delgado</em></p>
+        </header>
+        <footer>
+            <a href="#register" class="button scrolly">Register</a>
+        </footer>
+    </section>
+    
+<!-- First -->
+    <section id="register" class="main">
+        <header>
+            <div class="container">
+                <h2>Register</h2>
+                <p>Awesome Stuff <br />
+                @Keanu, I need help putting stuff here.</p>
+            </div>
+        </header>
+    </section>
+
+
+    
+<!-- Footer -->
+    <section id="footer">
+        <ul class="icons">
+            <li><a href="#" class="fa fa-twitter solo"><span>Twitter</span></a></li>
+            <li><a href="#" class="fa fa-facebook solo"><span>Facebook</span></a></li>
+            <li><a href="#" class="fa fa-google-plus solo"><span>Google+</span></a></li>
+        </ul>
+        <div class="copyright">
+            <ul class="menu">
+                <li>&copy; 2014
+                <!--auto updates the copyright year to the current year-->
+                <script language="JavaScript">
+                    var d=new Date(); 
+                    yr=d.getFullYear();
+                    if (yr!=2014)
+                        document.write("- "+yr);
+                </script>
+                Journey. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+<!-- Quote fade in/out script -->
+<script language="JavaScript">
+(function() {
+
+    var quotes = $(".quotes");
+    var quoteIndex = -1;
+
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(5000)
+            .fadeOut(2000, showNextQuote);
+    }
+
+    showNextQuote();
+})();
+</script>
+
+
 
 <%= form_for(@user) do |f| %>
     <%= f.label :email, "Email" %>
@@ -12,5 +84,5 @@
     <%= f.password_field :password_confirmation %>
     <br>
 
-    <%= f.submit "Create Account", :disable_with => 'Creating Account...' %>
+    <%= f.submit "Create Account", data: { disable_with: 'Creating Account...' } %>
 <% end %>
