@@ -84,5 +84,5 @@
     <%= f.password_field :password_confirmation %>
     <br>
 
-    <%= f.submit "Create Account", :disable_with => 'Creating Account...' %>
+    <%= f.submit "Create Account", data: { disable_with: 'Creating Account...' } %>
 <% end %>
