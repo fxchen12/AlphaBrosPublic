@@ -14,20 +14,10 @@
   <%= f.label :name %><br>
   <%= f.text_field :name %>
 
-  <!--THIS SHOULD BE A DROPDOWN-->  
   <%= f.label :type %><br>
-  <%= f.select :type, options_for_select(%w[Reps Distance Time]) %>
+  <%= f.select :type, options_for_select(%w[Time Distance]) %>
 
-  <!-- Show one of the three below dynamically based on type choice -->
-  <%= f.label :distance %><br>
-  <%= f.number_field :distance %>
-
-  <%= f.label :duration %><br>
   <%= f.number_field :duration %>
-
-  <%= f.label :reps %><br>
-  <%= f.number_field :reps %>
-  <!---->
 
   <%= f.label :notes %><br>
   <%= f.text_area :notes %>

@@ -45,7 +45,14 @@ class WorkoutsController < ApplicationController
     end
 
     def workout_params
-      params.require(:workout).permit(:name, :distance, :duration, :reps, :notes, :type)
+      p = params.require(:workout).permit(:name, :duration, :notes, :type)
+      # Check if distance was specified instead of duration
+      # And modify values accordingly before returning
+      if p[:type] == 'Distance'
+        p[:distance] = p[:duration]
+        p[:duration] = nil
+      end
+      return p
     end
     
 end

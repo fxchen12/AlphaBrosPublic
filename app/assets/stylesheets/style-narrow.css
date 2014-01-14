@@ -90,7 +90,9 @@
 
 			.main > header br
 			{
-				display: none;
+				/*display: none;*/
+				display: block;
+				margin-top: 20px;
 			}
 
 			.main > header p
