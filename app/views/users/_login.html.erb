@@ -4,9 +4,6 @@
 
     <%= f.label :password, "Password" %>
     <%= f.password_field :password %>
-	
-	<%= f.label :password_confirmation, "Password Confirmation" %>
-	<%= f.password_field :password %>
 	<br><br>
-    <%= f.submit "Register", data: { disable_with: 'Creating Account...' } %>
+    <%= f.submit "Login", data: { disable_with: 'Logging in...' } %>
 <% end %>
