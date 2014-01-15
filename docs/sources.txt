@@ -1,0 +1,20 @@
+Sources and Inspirations
+- Course Resources (course site, Piazza, Git, etc.)
+- en.wikipedia.org:
+  - http://en.wikipedia.org/wiki/Pushup
+  - http://en.wikipedia.org/wiki/Lunge_(exercise)
+- http://www.livestrong.com/
+- http://www.bodybuilding.com/
+- http://www.cbsnews.com/news/cdc-80-percent-of-american-adults-dont-get-recommended-exercise/
+- http://rubyonrails.org
+- http://edgeguides.rubyonrails.org/
+- http://railscasts.com/
+- http://dillinger.io/
+- http://daringfireball.net/projects/markdown/syntax
+- The Power of Habit by Charles Duhigg
+- http://www.flickr.com/photos/yellowstonenps
+- http://www.apple.com/
+- Battle for Middle Earth II
+- Predrag Gruevski
+- Bruno Faviero
+- Cosmos Darwin
