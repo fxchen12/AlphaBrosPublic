@@ -1218,7 +1218,34 @@
 			padding-top: 1.5em;
 		}
 		
-	
+		#loginBox
+		{
+			-webkit-appearance: none;
+			position: relative;
+			display: none;
+			background: rgba(100, 100, 100, 0.7);
+			padding: 0.85em 3em 0.85em 3em;
+			border-radius: 0.25em;
+			border: 0;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+			-moz-transition: all 0.25s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+			max-width: 500px;
+			
+		}
+
+		#loginBox.alt
+		{
+			color: inherit;
+			box-shadow: inset 0 0 0 1px #e6e6e6;
+			background: none;
+		}
+
 
 /*********************************************************************************/
 /* Main Sections                                                                 */
