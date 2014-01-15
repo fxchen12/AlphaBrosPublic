@@ -17,3 +17,7 @@
 
 # Ignore Thumbs.db
 /docs/Mockups/Thumbs.db
+/milestone1/Thumbs.db
+/docs/Mockups/Dashboard/Thumbs.db
+/docs/~$*
+/app/assets/images/Thumbs.db
