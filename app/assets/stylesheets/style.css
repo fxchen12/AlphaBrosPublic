@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+﻿@charset 'UTF-8';
 
 @font-face{font-family:'FontAwesome';src:url('fontawesome-webfont.eot?v=4.0.1');src:url('fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('fontawesome-webfont.woff?v=4.0.1') format('woff'),url('fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
 
@@ -1165,7 +1165,7 @@
 	{
 		position: relative;
 		margin: 0;
-		background: url('/assets/background.jpg');
+		background: url('/assets/background17.jpg');
 		background-size: cover;
 		background-position: center center;
 		padding: 14em 0 14em 0;
@@ -1217,6 +1217,8 @@
 		{
 			padding-top: 1.5em;
 		}
+		
+	
 
 /*********************************************************************************/
 /* Main Sections                                                                 */
