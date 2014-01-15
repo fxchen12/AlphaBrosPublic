@@ -1,4 +1,23 @@
 <!-- Header -->
+<script type="text/javascript">
+$(document).ready(login())
+
+function login(){
+
+          // Show chosen div, and hide all others
+        $("a").click(function (e) 
+        {
+		if($("#loginBox").css("display") == 'block'){
+				$("#loginBox").css("display",'none');
+			}
+			else{
+                e.preventDefault();
+            	$("#loginBox").css("display",'block');
+			}
+        });
+
+    });
+</script>
     		<div id="mini-notification">
             	<p>The notification has been successfully displayed</p>
         	</div>
@@ -10,7 +29,8 @@
             <%= render "quotes" %>
         </header>
         <footer>
-            <a href="#placeholder" class="button slow_scroll">Login</a><br><br>
+            <a href="javascript:login()" class="button">Login</a><br>
+			<div id="loginBox"><%= render "form" %></div><br>
             <a href="#register" class="button slow_scroll">Register</a>
         </footer>
     </section>
