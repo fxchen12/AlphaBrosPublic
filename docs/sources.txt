@@ -18,6 +18,7 @@ Sources and Inspirations
 - Predrag Gruevski
 - Bruno Faviero
 - Cosmos Darwin
+- Damon Doucet
 - http://www.minijs.com/plugins/8/
 - stackoverflow.com
 

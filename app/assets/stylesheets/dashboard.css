@@ -32,8 +32,14 @@ td.workout_name
 
 img.delete_image
 {
+  background-image:url('../images/delete_button_gray.png');
   width:30px;
   height:auto;
+}
+
+img.delete_image:hover
+{
+  background-image:url('../images/delete_button_red.png');
 }
 
 
