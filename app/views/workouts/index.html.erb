@@ -1,37 +1,13 @@
-<h1>Listing workouts</h1>
+<%= render '/layouts/navbar' %>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Distance</th>
-      <th>Duration</th>
-      <th>Reps</th>
-      <th>Notes</th>
-      <th>Type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= workout.name %></td>
-        <td><%= workout.distance %></td>
-        <td><%= workout.duration %></td>
-        <td><%= workout.reps %></td>
-        <td><%= workout.notes %></td>
-        <td><%= workout.type %></td>
-        <td><%= link_to 'Show', workout %></td>
-        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr class="workout_row">
+        <td class="delete_button"><%= image_tag "delete_button_gray.png", :class => "delete_image" %></td>
+        <td class="start_button"><%= image_tag "blue_chevron.png", :class => "start_image" %></td>
+        <td class="workout_name"><%= workout.name %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Workout', new_workout_path %>
