@@ -1,3 +1,10 @@
+div.dashboard_container
+{
+  background-color:white;
+}
+
+
+
 td.delete_button
 {
   padding-top:30px;
