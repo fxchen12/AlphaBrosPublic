@@ -11,8 +11,8 @@ class UsersController < ApplicationController
             flash[:success] = "Your account has been created!"
             redirect_to '/workouts'
         else
-            # Boooooo
-            render :new
+            flash[:error] = "Registration failed."
+            redirect_to root_url
         end
     end
 

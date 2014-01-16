@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
     before_create :create_remember_token
     validates :email, presence: true, email: true, uniqueness: true
     has_secure_password
-    validates :password, length: { minimum: 6 }
-
+    
 def User.new_remember_token
     SecureRandom.urlsafe_base64
 end

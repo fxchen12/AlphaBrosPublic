@@ -3,7 +3,12 @@ div.dashboard_container
   background-color:white;
 }
 
-
+div.no_workouts
+{
+  padding-left:10pt;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+}
 
 td.delete_button
 {
@@ -11,6 +16,12 @@ td.delete_button
   width: 10%;
   text-align: center;
   vertical-align: middle;
+}
+
+img.delete_image
+{
+  width:30px;
+  height:30px;
 }
 
 td.start_button
@@ -29,19 +40,6 @@ td.workout_name
   font-size:24pt;
   vertical-align: middle;
 }
-
-img.delete_image
-{
-  background-image:url('../images/delete_button_gray.png');
-  width:30px;
-  height:auto;
-}
-
-img.delete_image:hover
-{
-  background-image:url('../images/delete_button_red.png');
-}
-
 
 img.start_image
 {

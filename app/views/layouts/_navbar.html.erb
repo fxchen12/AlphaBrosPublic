@@ -1,3 +1,8 @@
+<table class="namebar">
+  <td id="username"><%= current_user.name %></td>
+  <td id="options"><%= link_to "Settings", current_user %> | <%= link_to "Log Out", signout_path %></td>
+</table>
+
 <div class="navbar">
   <span><a href=''>Dashboard</a></span>
   <span><a href=''>Goals</a></span>
