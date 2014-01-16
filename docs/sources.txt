@@ -1,25 +1,41 @@
-Sources and Inspirations
-- Course Resources (course site, Piazza, Git, etc.)
+Sources (informational):
 - en.wikipedia.org:
   - http://en.wikipedia.org/wiki/Pushup
   - http://en.wikipedia.org/wiki/Lunge_(exercise)
 - http://www.livestrong.com/
 - http://www.bodybuilding.com/
 - http://www.cbsnews.com/news/cdc-80-percent-of-american-adults-dont-get-recommended-exercise/
+- The Power of Habit by Charles Duhigg
+
+Sources (technical):
+- Course Resources (course site, Piazza, Git, etc.)
 - http://rubyonrails.org
 - http://edgeguides.rubyonrails.org/
 - http://railscasts.com/
 - http://dillinger.io/
 - http://daringfireball.net/projects/markdown/syntax
-- The Power of Habit by Charles Duhigg
-- http://www.flickr.com/photos/yellowstonenps
+- http://www.minijs.com/plugins/8/
+- stackoverflow.com
+  - http://stackoverflow.com/questions/6939864/what-is-the-difference-between-section-and-div
+  - http://stackoverflow.com/questions/787839/resize-image-proportionally-with-css
+  - http://stackoverflow.com/questions/8436998/rails-change-form-submit-image-on-hover-using-image-submit-tag
+- http://www.w3schools.com
+  - http://www.w3schools.com/css/css_table.asp
+  - http://www.w3schools.com/cssref/pr_padding-top.asp
+  - http://www.w3schools.com/cssref/pr_background-image.asp
+  - http://www.w3schools.com/cssref/sel_hover.asp
+
+Inspirations:
 - http://www.apple.com/
+- https://www.uber.com/
 - Battle for Middle Earth II
+
+Images:
+- http://www.morguefile.com/archive/#/?q=mountain
+- http://www.flickr.com/photos/yellowstonenps
+
+Received help from:
 - Predrag Gruevski
 - Bruno Faviero
 - Cosmos Darwin
-- http://www.minijs.com/plugins/8/
-- stackoverflow.com
-
-
-images: http://www.morguefile.com/archive/#/?q=mountain
+- Damon Doucet

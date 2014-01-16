@@ -3,13 +3,10 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.all
+    @workout = Workout.new
   end
 
   def show
-  end
-
-  def new
-    @workout = Workout.new
   end
 
   def edit
@@ -19,9 +16,10 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
 
     if @workout.save
-      redirect_to @workout, notice: 'Workout was successfully created.'
+      redirect_to workouts_url, notice: 'New workout added!'
     else
-      render 'new'
+      flash[:error] = "Workout failed to save."
+      render 'workouts'
     end
   end
 
