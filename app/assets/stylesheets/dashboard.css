@@ -1,4 +1,4 @@
-.delete_button
+td.delete_button
 {
   padding-top:30px;
   width: 10%;
@@ -6,7 +6,7 @@
   vertical-align: middle;
 }
 
-.start_button
+td.start_button
 {
   padding-top:30px;
   width:10%;
@@ -14,7 +14,7 @@
   vertical-align: middle;
 }
 
-.workout_name
+td.workout_name
 {
   padding-top:30px;
   width:50%;
@@ -23,20 +23,15 @@
   vertical-align: middle;
 }
 
-.delete_image
+img.delete_image
 {
   width:30px;
   height:auto;
 }
 
+
 img.start_image
 {
   width:80px;
   height:auto;
-}
-
-.workout_form
-{
-  margin-right:auto;
-  margin-left:auto;
 }
