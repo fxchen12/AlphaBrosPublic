@@ -1,3 +1,4 @@
+
 <%= render '/layouts/navbar' %>
 
 <div class="dashboard_container">
@@ -6,11 +7,19 @@
   <% else %>
     <table>
       <tbody>
-
         <% @workouts.each do |workout| %>
           <tr class="workout_row">
             <td class="delete_button">
-                <%= link_to("text", workout, :method => :delete, data: { confirm: "Delete this workout?" }, :class => "delete_sprite")  %>
+                <%=
+                  link_to(
+                    image_tag("delete_button_gray.png",
+                      :onmouseover => "this.src='/assets/delete_button_red.png'",
+                      :onmouseout => "this.src='/assets/delete_button_gray.png'",
+                      :class => "delete_image"),
+                  workout,
+                  :method => :delete,
+                  data: { confirm: "Delete this workout?" })
+                %>
             </td>
             <td class="start_button"><%= image_tag "blue_chevron.png", :class => "start_image" %></td>
             <td class="workout_name"><%= workout.name %></td>

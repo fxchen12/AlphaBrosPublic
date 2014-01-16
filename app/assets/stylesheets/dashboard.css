@@ -18,18 +18,10 @@ td.delete_button
   vertical-align: middle;
 }
 
-a.delete_sprite
+img.delete_image
 {
-  display:inline-block;
-  width:45px;
-  height:45px;
-  background:url("delete_button_gray.png");
-  color:transparent;
-}
-
-a.delete_sprite:hover
-{
-  background:url("delete_button_red.png");
+  width:30px;
+  height:30px;
 }
 
 td.start_button
