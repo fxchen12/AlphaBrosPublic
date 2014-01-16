@@ -11,16 +11,9 @@
     </div>
   <% end %>
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
+  <center>
+    <%= f.text_field :name, :placeholder => "Enter an activity to add...", :size => '40' %>
 
-  <%= f.label :type %><br>
-  <%= f.select :type, options_for_select(%w[Time Distance]) %>
-
-  <%= f.number_field :duration %>
-
-  <%= f.label :notes %><br>
-  <%= f.text_area :notes %>
-
-  <%= f.submit %>
+    <%= f.submit %>
+  </center>
 <% end %>

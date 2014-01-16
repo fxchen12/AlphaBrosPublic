@@ -23,7 +23,7 @@
   vertical-align: middle;
 }
 
-img.delete_image
+.delete_image
 {
   width:30px;
   height:auto;
@@ -33,4 +33,10 @@ img.start_image
 {
   width:80px;
   height:auto;
+}
+
+.workout_form
+{
+  margin-right:auto;
+  margin-left:auto;
 }
