@@ -1,6 +1,9 @@
 require 'valid_email'
 class User < ActiveRecord::Base
 
+    has_many :workouts
+    has_many :workout_records
+
     before_save { self.email = email.downcase }
     before_create :create_remember_token
     validates :email, presence: true, email: true, uniqueness: true
