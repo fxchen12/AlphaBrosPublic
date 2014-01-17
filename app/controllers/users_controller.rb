@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    skip_before_action :require_login, only: [:new, :create]
+    before_action :jump_to_dashboard, only: [:new, :create]
 
     def new
         @user = User.new
@@ -44,5 +46,4 @@ class UsersController < ApplicationController
         def update_params
             params.require(:user).permit(:name, :password, :password_confirmation)
         end
-
 end
