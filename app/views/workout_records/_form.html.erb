@@ -12,9 +12,10 @@
   <% end %>
 
   <center>
-      <%= f.text_field :duration, :size => 13, :placeholder => "Time (minutes)" %>
-      <%= f.text_field :distance, :size => 13, :placeholder => "Distance (miles)" %>
+    Completed Workout: <%= workout.name %>
+    <%= f.text_field :duration, :size => 13, :placeholder => "Time (minutes)" %>
+    <%= f.text_field :distance, :size => 13, :placeholder => "Distance (miles)" %>
 
-      <%= f.submit "Record", data: { disable_with: 'Saving...' } %>
+    <%= f.submit "Record", data: { disable_with: 'Saving...' } %>
   </center>
 <% end %>

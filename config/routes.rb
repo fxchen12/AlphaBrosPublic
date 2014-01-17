@@ -24,6 +24,7 @@ Work6470::Application.routes.draw do
   match '/dashboard', to: 'workouts#index', via: 'get'
   match '/progress', to: 'workout_records#index', via: 'get'
   match '/achievements', to: 'achievements#index', via: 'get'
+  match '/settings', to: 'users#show', via: 'get'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

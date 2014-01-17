@@ -6,12 +6,10 @@ div.dashboard_background
 	overflow:auto;
 	/*padding-bottom: -6em;*/
 	margin-bottom:1em;
-  	background-image: url('background8.jpg');
+  background-image: url('background8.jpg');
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center;
-	
-
 }
 
 div.dashboard_container
@@ -19,13 +17,6 @@ div.dashboard_container
   color:#404040;
   background-color:rgba(255,255,255,0.57);
   box-shadow: inset 0 1px 0 0 #404040;
-}
-
-div.no_workouts
-{
-  padding-left:10pt;
-  padding-top: 10pt;
-  padding-bottom: 10pt;
 }
 
 td.delete_button
@@ -63,13 +54,41 @@ img.start_image
 {
   width:80px;
   height:auto;
+  cursor: pointer;
 }
 
-.new_workout_record label, 
+div.workout_record
+{
+  position: absolute;
+  top: 11%;
+  left: 25%;
+  margin-top: 40px;
+  width: 50%;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: .25em;
+  line-height: 125%;
+  z-index: 110;
+}
+
+div.dash_cover
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  opacity: 0.65;
+  z-index: 100;
+}
+
 .new_workout_record input, 
 .new_workout_record input[type="submit"]
 {
-  display:inline-block;
+  display:block;
+  margin-top:15px;
 }
 
 .hide
