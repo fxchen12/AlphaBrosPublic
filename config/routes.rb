@@ -14,13 +14,16 @@ Work6470::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:create, :destroy]
   resources :workouts, only: [:create, :destroy, :index]
-  resources :workout_records, only: [:create, :destroy]
+  resources :workout_records, only: [:create, :destroy, :index]
+  resources :goals, only: [:create, :destroy, :index]
 
   match '/signup', to: 'users#new', via: 'get'
-  match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/dashboard', to: 'workouts#index', via: 'get'
+  match '/progress', to: 'workout_records#index', via: 'get'
+  match '/achievements', to: 'achievements#index', via: 'get'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

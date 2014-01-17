@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  workout: 
+  distance: 1
+  duration: 1
+  type: 
+
+two:
+  user: 
+  workout: 
+  distance: 1
+  duration: 1
+  type: 
