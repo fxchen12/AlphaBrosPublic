@@ -12,13 +12,9 @@
   <% end %>
 
   <center>
-    <span><%= f.label :time, "Time" %></span>
-    <span><%= f.text_field :time %></span>
-    <span><%= f.label :distance, "Distance" %></span>
-    <span><%= f.text_field :distance %></span>
-    <span><%= f.label :calories, "Calories" %></span>
-    <span><%= f.text_field :calories %></span>
+      <%= f.text_field :duration, :size => 13, :placeholder => "Time (minutes)" %>
+      <%= f.text_field :distance, :size => 13, :placeholder => "Distance (miles)" %>
 
-    <%= f.submit "Save", data: { disable_with: 'Saving...' } %>
+      <%= f.submit "Record", data: { disable_with: 'Saving...' } %>
   </center>
 <% end %>

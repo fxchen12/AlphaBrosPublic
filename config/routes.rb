@@ -1,5 +1,5 @@
 Work6470::Application.routes.draw do
-  resources :workouts
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -15,12 +15,13 @@ Work6470::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :workouts
+  resources :workouts, only: [:create, :destroy, :index]
+  resources :workout_records, only: [:create, :destroy]
 
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
-  
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -49,7 +50,7 @@ Work6470::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

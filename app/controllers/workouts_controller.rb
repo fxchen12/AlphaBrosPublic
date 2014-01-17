@@ -4,6 +4,7 @@ class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
     @workout = Workout.new
+    @workout_record = WorkoutRecord.new
   end
 
   def show
@@ -43,14 +44,7 @@ class WorkoutsController < ApplicationController
     end
 
     def workout_params
-      p = params.require(:workout).permit(:name, :duration, :notes, :type)
-      # Check if distance was specified instead of duration
-      # And modify values accordingly before returning
-      if p[:type] == 'Distance'
-        p[:distance] = p[:duration]
-        p[:duration] = nil
-      end
-      return p
+      params.require(:workout).permit(:name, :notes)
     end
-    
+
 end
