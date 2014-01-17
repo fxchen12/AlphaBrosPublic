@@ -11,6 +11,8 @@ $(function() {
             $(".nav_element.p a").html("<strong>Progress</strong>").removeAttr("href");
         } else if ($(".achievements_container").length){
             $(".nav_element.a a").html("<strong>Achievements</strong>").removeAttr("href");
+        } else {
+            $("#options #settings").html("<strong>Settings</strong>").removeAttr("href");
         }
     }
 });
