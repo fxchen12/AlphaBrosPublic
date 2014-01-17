@@ -1,44 +1,46 @@
 <div class="dashboard_background">
+  <!-- Cover for overlay, invisible by default -->
+  <div class="dash_cover" style="display:none;"></div>
+  
   <%= render '/layouts/navbar' %>
+
   <div class="dashboard_container">
-      <% if @workouts.empty? %>
-        <div class="no_workouts"></div>
-      <% else %>
-        <table>
-          <tbody>
-            <% @workouts.each do |workout| %>
-              <tr class="workout_row">
-                <td class="delete_button">
-                    <%=
-                      link_to(
-                        image_tag("delete_button_gray.png",
-                          :onmouseover => "this.src='/assets/delete_button_red.png'",
-                          :onmouseout => "this.src='/assets/delete_button_gray.png'",
-                          :class => "delete_image"),
-                      workout,
-                      :method => :delete,
-                      data: { confirm: "Delete this workout?" })
-                    %>
-                </td>
-                <td class="start_button">
-                  <%=
-                    image_tag("blue_chevron.png",
-                      :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
-                      :onmouseout => "this.src='/assets/blue_chevron.png'",
-                      :class => "start_image",
-                      :id => workout.id)
-                    %>
-                </td>
-              <td class="workout_name"><%= workout.name %></td>
-            </tr>
-            <tr class="workout_record" id="<%= workout.id %>" style="display:none;">
-              <td colspan="3">
-                <%= render :partial => 'workout_records/form' %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+    <!-- Main table to display workout rows -->
+    <table>
+      <tbody>
+        <% @workouts.each do |workout| %>
+          <tr class="workout_row">
+            <td class="delete_button">
+              <%=
+                link_to(
+                  image_tag("delete_button_gray.png", :class => "delete_image"),
+                  workout,
+                  :method => :delete,
+                  data: { confirm: "Delete this workout?" }
+                )
+              %>
+            </td>
+            <td class="start_button">
+              <%=
+                image_tag("blue_chevron.png",
+                  :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
+                  :onmouseout => "this.src='/assets/blue_chevron.png'",
+                  :class => "start_image",
+                  :id => workout.id
+                )
+              %>
+            </td>
+            <td class="workout_name"><%= workout.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <!-- Overlay to display workout record entry form -->
+    <% @workouts.each do |workout| %>
+      <div class="workout_record" id="<%= workout.id %>" style="display:none;">
+        <%= render :partial => 'workout_records/form', :locals => { :workout => workout } %>
+      </div>
     <% end %>
 
     <%= render 'form' %>

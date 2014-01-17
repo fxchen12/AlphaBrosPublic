@@ -10,9 +10,6 @@ class WorkoutsController < ApplicationController
   def show
   end
 
-  def edit
-  end
-
   def create
     @workout = Workout.new(workout_params)
 
