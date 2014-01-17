@@ -1,47 +1,50 @@
 <div class="dashboard_background">
   <%= render '/layouts/navbar' %>
   <div class="dashboard_container">
-    <div class="dashboard_content">
-      <% if @workouts.empty? %>
-        <div class="no_workouts">Add a workout to get started!</div>
-      <% else %>
-        <table>
-          <tbody>
-            <% @workouts.each do |workout| %>
-              <tr class="workout_row">
-                <td class="delete_button">
-                    <%=
-                      link_to(
-                        image_tag("delete_button_gray.png",
-                          :onmouseover => "this.src='/assets/delete_button_red.png'",
-                          :onmouseout => "this.src='/assets/delete_button_gray.png'",
-                          :class => "delete_image"),
-                      workout,
-                      :method => :delete,
-                      data: { confirm: "Delete this workout?" })
-                    %>
-                </td>
-                <td class="start_button">
+    <% if @workouts.empty? %>
+      <div class="no_workouts">Add a workout to get started!</div>
+    <% else %>
+      <table>
+        <tbody>
+          <% @workouts.each do |workout| %>
+            <tr class="workout_row">
+              <td class="delete_button">
                   <%=
-                      link_to(
-                        image_tag("blue_chevron.png",
-                          :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
-                          :onmouseout => "this.src='/assets/blue_chevron.png'",
-                          :class => "start_image"),
-                      workout,
-                      :method => :delete,
-                      data: { confirm: "Delete this workout?" })
-                    %>
-                <td class="workout_name"><%= workout.name %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% end %>
+                    link_to(
+                      image_tag("delete_button_gray.png",
+                        :onmouseover => "this.src='/assets/delete_button_red.png'",
+                        :onmouseout => "this.src='/assets/delete_button_gray.png'",
+                        :class => "delete_image"),
+                    workout,
+                    :method => :delete,
+                    data: { confirm: "Delete this workout?" })
+                  %>
+              </td>
+              <td class="start_button">
+                <%=
+                    link_to(
+                      image_tag("blue_chevron.png",
+                        :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
+                        :onmouseout => "this.src='/assets/blue_chevron.png'",
+                        :class => "start_image"),
+                    workout,
+                    :method => :delete,
+                    data: { confirm: "Delete this workout?" })
+                  %>
+              <td class="workout_name"><%= workout.name %></td>
+            </tr>
+            <tr class="workout_record">
+              <td colspan="3">
+                <%= render :partial => 'workout_records/form' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
 
-      <%= render 'form' %>
+    <%= render 'form' %>
 
-      <br>
-    </div>
+    <br>
   </div>
 </div>
