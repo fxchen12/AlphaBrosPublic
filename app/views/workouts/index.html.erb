@@ -25,7 +25,8 @@
                     image_tag("blue_chevron.png",
                       :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
                       :onmouseout => "this.src='/assets/blue_chevron.png'",
-                      :class => "start_image")
+                      :class => "start_image",
+                      :id => workout.id)
                     %>
                 </td>
               <td class="workout_name"><%= workout.name %></td>
