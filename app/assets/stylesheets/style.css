@@ -1338,18 +1338,27 @@
 
 	#footer
 	{
-		position: relative;
+		/*position: relative;*/
 		margin: 0;
 		text-align: center;
-		padding: 4em 0 8em 0;
+		padding: 1em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 #e6e6e6;
+    	height: 6em;
+    	position: relative;
+    	width: 100%;
+		margin-top: -6em; /*Must be - of height.*/
+		clear:both;
 	}
 
 		#footer .copyright
 		{
-			margin-top: 3em;
+			margin-top: .3em;
 			font-size: 0.8em;
 			color: #aaa;
+		}
+		#footer ul
+		{
+			margin-bottom: 5px;
 		}
 
 			#footer .copyright a
