@@ -21,18 +21,6 @@
                       data: { confirm: "Delete this workout?" })
                     %>
                 </td>
-                <td class="start_button">
-                  <%=
-                    link_to(
-                      image_tag("delete_button_gray.png",
-                        :onmouseover => "this.src='/assets/delete_button_red.png'",
-                        :onmouseout => "this.src='/assets/delete_button_gray.png'",
-                        :class => "delete_image"),
-                    workout,
-                    :method => :delete,
-                    data: { confirm: "Delete this workout?" })
-                  %>
-              </td>
               <td class="start_button">
                 <%=
                     link_to(
@@ -60,4 +48,5 @@
 
     <br>
   </div>
+</div>
 </div>

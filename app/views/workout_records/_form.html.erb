@@ -13,12 +13,19 @@
 
   <center>
     <span>
-      <%= f.label :duration, "Time (minutes)" %>
-      <%= f.text_field :duration %>
-      <%= f.label :distance, "Distance (miles)" %>
-      <%= f.text_field :distance %>
+      <div>
+ <div style="float: left;">
+       <%= f.text_field :duration, :placeholder => "Time (minutes)" %></div>
+ <div style="float: left; "> 
+      <%= f.text_field :distance, :placeholder => "Distance (miles)" %></div>
 
-      <%= f.submit "Save", data: { disable_with: 'Saving...' } %>
+ <div style="float: left;"><%= f.submit "Save", data: { disable_with: 'Saving...' }, :style => "" %></div>
+ <br style="clear: left;" />
+</div>
+   
+     
+
+      
     </span>
   </center>
 <% end %>

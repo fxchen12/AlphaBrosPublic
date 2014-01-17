@@ -5,11 +5,12 @@ div.dashboard_background
 	min-height:100%;
 	overflow:auto;
 	/*padding-bottom: -6em;*/
-	margin-bottom:0em;
+	margin-bottom:1em;
   	background-image: url('background8.jpg');
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center;
+	
 
 }
 
