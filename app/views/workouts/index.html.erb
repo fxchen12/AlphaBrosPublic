@@ -30,7 +30,7 @@
                 </td>
               <td class="workout_name"><%= workout.name %></td>
             </tr>
-            <tr class="workout_record" style="display:none;">
+            <tr class="workout_record" id="<%= workout.id %>" style="display:none;">
               <td colspan="3">
                 <%= render :partial => 'workout_records/form' %>
               </td>
