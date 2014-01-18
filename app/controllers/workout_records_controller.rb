@@ -1,5 +1,9 @@
 class WorkoutRecordsController < ApplicationController
 
+  def index
+    @workouts = current_user.workouts
+  end
+
   def create
     @workout_record = WorkoutRecord.new(workout_record_params)
 
