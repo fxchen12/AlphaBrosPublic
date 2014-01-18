@@ -13,6 +13,10 @@ $(function() {
                 cover.hide();
                 form.hide();
             });
+            $(".xbutton").click(function() {
+                cover.hide();
+                form.hide();
+            });
         });
 
         $(".delete_button a").hover(function() {

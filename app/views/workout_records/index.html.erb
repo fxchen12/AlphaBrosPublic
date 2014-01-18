@@ -1,6 +1,36 @@
 <!-- This is the page to display a summary of workout progress -->
 <div class="progress_background">
   <%= render '/layouts/navbar' %>
+  
   <div class="progress_container">
+    <table>
+      <thead>
+        <tr>
+          <th>Workout</th>
+          <th colspan="5">Time</th>
+          <th colspan="5">Distance</th>
+        </tr>
+        <tr class="subhead">
+          <th></th>
+          <th>Today</th>
+          <th>This Week</th>
+          <th>This Month</th>
+          <th>This Year</th>
+          <th>Total</th>
+          <th>Today</th>
+          <th>This Week</th>
+          <th>This Month</th>
+          <th>This Year</th>
+          <th>Total</th>
+      </thead>
+      <tbody>
+        <% @workouts.each do |w| %>
+        <tr>
+          <td>w.name</td>
+          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration } %></td>
+          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration unless r.created_at.to_date != Date.today } %></td>
+          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration unless r.created_at.to_date.month != Date.today.month } %></td>
+          <% 
+    <% end %>
   </div>
 </div>

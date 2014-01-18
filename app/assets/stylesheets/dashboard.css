@@ -95,3 +95,12 @@ div.dash_cover
 {
   display: none;
 }
+
+.xbutton
+{
+  font-size:13pt;
+  position:absolute;
+  right: 7px;
+  top: 5px;
+  cursor:pointer;
+}
