@@ -14,8 +14,6 @@ class UsersController < ApplicationController
             flash[:success] = "Your account has been created!"
             redirect_to '/dashboard'
         else
-            #TODO: Make this error more descriptive
-            flash[:error] = "Registration failed."
             redirect_to root_url
         end
     end
@@ -28,11 +26,9 @@ class UsersController < ApplicationController
     def update
         @user = current_user
         if @user.update(update_params)
-            flash[:success] = "Your settings have been applied!"
+            flash[:success] = "Your changes have been applied!"
             redirect_to '/settings'
         else
-            #TODO: Make this error more descriptive
-            flash[:error] = "Settings failed to save."
             render :show
         end
     end

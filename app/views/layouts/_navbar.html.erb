@@ -1,6 +1,6 @@
 <table class="namebar">
   <td id="username"><%= current_user.name %></td>
-  <td id="options"><%= link_to "Settings", current_user, :id => 'settings' %> | <%= link_to "Log Out", signout_path, :method => :delete %></td>
+  <td id="options"><%= link_to "Settings", '/settings', :id => 'settings' %> | <%= link_to "Log Out", signout_path, :method => :delete %></td>
 </table>
 
 <div class="navbar">

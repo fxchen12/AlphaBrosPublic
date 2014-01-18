@@ -1,0 +1,36 @@
+<table>
+  <tbody>
+    <tr>
+      <td id="name">
+        <%= form_for(@user) do |f| %>
+          <% if @user.errors.any? %>
+            <div id="error_explanation">
+              <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+            <%= f.label :name, "Display Name" %>
+            <%= f.text_field :name %>
+
+            <%= f.submit "Update Name", data: { disable_with: 'Saving...' } %>
+        <% end %>
+      </td>
+
+      <td id="password">
+        <%= form_for(@user) do |f| %>
+
+            <%= f.label :password, "New Password" %>
+            <%= f.password_field :password %>
+            <%= f.label :password_confirmation, "New Password Confirmation" %>
+            <%= f.password_field :password_confirmation %>
+
+            <%= f.submit "Update Password", data: { disable_with: 'Saving...' } %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

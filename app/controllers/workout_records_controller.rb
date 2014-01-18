@@ -4,9 +4,9 @@ class WorkoutRecordsController < ApplicationController
     @workout_record = WorkoutRecord.new(workout_record_params)
 
     if @workout_record.save
-      redirect_to workouts_url, notice: 'New workout record added!'
+      flash[:success] = "New workout record added!"
+      redirect_to workouts_url
     else
-      flash[:error] = "Workout record failed to save."
       render 'workouts'
     end
   end
