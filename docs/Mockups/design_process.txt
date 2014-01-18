@@ -1,0 +1,84 @@
+6.470 Design Process
+
+
+I. Identify Needs
+- Primary: People are not motivated to exercise. They do not have good exercise habits—they can exercise once in a while, but not regularly. According to CDC, about 80% of Americans do not get adequate regular exercise.
+- People don’t know how to design effective exercise routines. The routines they design may be ineffective, too time consuming, or too difficult.
+
+
+II. Research Phase
+- Wikipedia (1): Large body of knowledge with some variety, pages not consistent in terms of thoroughness, reliability somewhat questionable, no personal motivation capability
+- Personal routines (2): Limited knowledge, difficult to design well, motivation difficult to obtain
+- Personal trainer (3): Expensive, possibly too focused, difficult to schedule
+- Livestrong (4)
+- Bodybuilding.com (5)
+- Friends (6)
+Morphological Analysis
+Feature 1 2 3 4 5 6
+Consistent exercise instructions  Ish No  Yes Yes Yes Ish
+Workout plans No  No  Yes ? Yes Ish
+Reminders No  No  Ish ? Yes Ish
+Large, easily searchable database Yes No  No  Yes Yes No
+Free  Yes Yes No  Yes Ish Yes
+Community driven  Yes No  No  No  No  Ish
+Track success No  No  Ish ? Yes Ish
+
+There is no current site (to our knowledge) that provides a simple motivation system designed for casual users. Most motivation systems that currently exist seem to be targeted towards athletes, bodybuilders, and people that are serious about exercise in general. We believe that a better solution does not need consistent exercise instructions, but needs workout plans. It does not need reminders (most Americans have difficulty scheduling regular exercise) or an amazing database. It does need to be free and very easy to use, and it must not require other people. Additionally, it must be very motivating (cue, routine, reward).
+
+
+III. Stakeholder Analysis
+Developers:
+- Win 6.470 (as many prizes as possible)
+- Genuine positive impact (something that actually helps)
+- Learn
+Users:
+- Gain good exercise habits (motivation!)
+- Feel good about themselves (achievements!)
+
+
+IV. Operational Research
+- Time Resources: as much as developers can reasonably spare, given other commitments (Austin: swimming, Sundar; Francis: GEL/ESD.054, SuperUROP/20.S952; Keanu: Crew)
+- Skill Resources: Keanu knows the most, then Austin, then Francis
+- Tools: Git, Ruby on Rails, jQuery/Javascript, CSS, HTML
+
+
+V. Hazard Analysis
+- Lack of adoption (publicity)
+- Unfinished development (prioritize)
+- Malicious users (security, IP banning, content checking)
+- Insufficient usability—not convenient enough, etc. (rigorous usability testing)
+
+
+VI. Specifications
+We hope to create a site that contrasts with bodybuilders.com the way the iPad contrasts with earlier tablet computers. It will be a fitness site emphasizing aerobic exercise, targeted towards working Americans 25 and older. It will site for everyone to use that is motivating, not intimidating. We want to communicate that fitness is easy, that it’s cool, and that it’s for everyone. It has to be simple, discoverable, and rewarding.
+
+
+VII. Creative Design
+The site is called Journey, emphasizing the movement over long distance aspect of aerobic exercise. We use a landscape theme to inspire users and motivate them.
+
+Habits consist of cues, routines, and rewards. We want all three to be covered by our product.
+
+Cues should not rely upon timed reminders--people have difficulty sticking to routines that are not mandatory. Instead, we hope that users will log in to the site in their free time. The large, aesthetically pleasing chevrons will serve as cues, reminding users of the need for exercise. Additionally, we will allow goal setting, so that users can hopefully use the same cues over and over again.
+
+Routines will be tracked by allowing users to enter routine data into a form. We will allow time in minutes and distance in miles only, for simplicity. This process of submitting workout records should feel substantial and important, to encourage users to follow through with routines.
+
+Rewards will be displayed through progress and achievements. Progress displays will be aesthetically pleasing and encouraging. Achievements will provide additional rewards and motivators, perhaps even serving as cues themselves.
+
+Every habit is driven by a craving, and our site seeks to use the craving for self-improvement and excellence as the motivator for our users' success. Thus, we seek to be inspiring, always reminding users of the glories that their efforts can bring.
+
+
+VIII. Conceptual Design
+The following functionalities should be supported:
+- Goal setting and progress tracking
+- Recording workout results
+- Multiple views of progress
+- Achievements
+Detailed mockups can be found in the corresponding folder.
+
+
+IX. Implementation
+In progress. See Google Doc.
+
+
+X. Verification
+At least two rounds of 5 users each for MVP usability testing. At least two rounds of 5 users each for final usability testing. We will carefully document all suggestions and polish the product aggresively before the final deadline.

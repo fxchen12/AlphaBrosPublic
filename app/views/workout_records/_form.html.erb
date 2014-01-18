@@ -1,8 +1,6 @@
 <%= form_for(@workout_record) do |f| %>
   <% if @workout_record.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@workout_record.errors.count, "error") %> prohibited this workout_record from being saved:</h2>
-
       <ul>
       <% @workout_record.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -13,8 +11,9 @@
 
   <center>
     Completed Workout: <%= workout.name %>
-    <%= f.text_field :duration, :size => 13, :placeholder => "Time (minutes)" %>
-    <%= f.text_field :distance, :size => 13, :placeholder => "Distance (miles)" %>
+    <%= f.text_field :duration, :size => 14, :placeholder => "Time (minutes)" %>
+    <%= f.text_field :distance, :size => 14, :placeholder => "Distance (miles)" %>
+    <%= f.hidden_field :workout_id, :value => workout.id %>
 
     <%= f.submit "Record", data: { disable_with: 'Saving...' } %>
   </center>

@@ -1,8 +1,8 @@
 require 'valid_email'
 class User < ActiveRecord::Base
 
-    has_many :workouts
-    has_many :workout_records
+    has_many :workouts, dependent: :destroy
+    has_many :workout_records, dependent: :destroy
 
     serialize :achievements, Array
 

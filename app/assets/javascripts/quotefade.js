@@ -1,7 +1,5 @@
-//Wait for page load
 $(function() {
 
-    //Check if there is a 'quotes' class on document
     if ($(".quotes").length) {
 
         var quotes = $(".quotes");
