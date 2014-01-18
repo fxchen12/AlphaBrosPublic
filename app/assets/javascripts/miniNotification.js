@@ -1,5 +1,5 @@
-
 $(function() {
+
   $.miniNotification = function(element, options) {
     var appendCloseButton, getHiddenCssProps, getVisibleCssProps, setState, state, wrapInnerElement,
       _this = this;

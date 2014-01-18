@@ -1,4 +1,4 @@
-
-      $(function() {
-        $('#mini-notification').miniNotification({closeButton: true, closeButtonText: '[close]'});
-      });
+$(function() {
+    
+    $('#mini-notification').miniNotification({closeButton: true, closeButtonText: '[close]'});
+});

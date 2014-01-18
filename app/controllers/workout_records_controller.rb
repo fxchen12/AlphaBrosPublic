@@ -4,10 +4,11 @@ class WorkoutRecordsController < ApplicationController
     @workout_record = WorkoutRecord.new(workout_record_params)
 
     if @workout_record.save
-      redirect_to workouts_url, notice: 'New workout record added!'
+      flash[:success] = "New workout record added!"
+      redirect_to workouts_url
     else
-      flash[:error] = "Workout record failed to save."
-      render 'workouts'
+      flash[:error] = @workout_record.errors.full_messages[0].split(' ')[1..-1].join(' ')
+      redirect_to workouts_url
     end
   end
 
@@ -19,6 +20,6 @@ class WorkoutRecordsController < ApplicationController
   private
 
   def workout_record_params
-    params.require(:workout_record).permit(:duration, :distance)
+    params.require(:workout_record).permit(:duration, :distance, :workout_id)
   end
 end

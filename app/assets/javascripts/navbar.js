@@ -1,6 +1,5 @@
 $(function() {
 
-    //Check if there is a 'quotes' class on document
     if ($(".navbar").length) {
 
         if ($(".dashboard_container").length) {
