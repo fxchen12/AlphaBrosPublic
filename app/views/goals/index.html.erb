@@ -7,34 +7,14 @@
       <tbody>
         <% @workouts.each do |workout| %>
           <tr class="goal_row">
-            <td class="delete_button">
-              <%=
-                link_to(
-                  image_tag("delete_button_gray.png", :class => "delete_image"),
-                  workout,
-                  :method => :delete,
-                  data: { confirm: "Delete this workout?" }
-                )
-              %>
-            </td>
-            <td class="workout_name"><%= workout.name %></td>
+            <td class="goals_workout_name"><%= workout.name %></td>
+            <td class="progress"> Goal text and progress bar go here. </td>
             <td class="goal_button">
               <%=
-                image_tag("goal_button_gray",
+                image_tag("goal_button_gray.png",
                   :onmouseover => "this.src='/assets/goal_button_gold.png'",
                   :onmouseout => "this.src='/assets/goal_button_gray.png'",
                   :class => "goal_image",
-                  :id => workout.id
-                )
-              %>
-            </td>
-            <td> Goal text and progress bar go here. </td>
-            <td class="start_button">
-              <%=
-                image_tag("blue_chevron.png",
-                  :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
-                  :onmouseout => "this.src='/assets/blue_chevron.png'",
-                  :class => "start_image",
                   :id => workout.id
                 )
               %>
@@ -45,18 +25,10 @@
     </table>
 
     <% @workouts.each do |workout| %>
-      <div class="workout_record" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'workout_records/form', :locals => { :workout => workout } %>
-      </div>
-    <% end %>
-
-    <% @workouts.each do |workout| %>
       <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'form', :locals => { :workout => workout } %>
+        <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
       </div>
     <% end %>
-
-    <%= render 'workouts/form' %>
 
     <br>
   </div>
