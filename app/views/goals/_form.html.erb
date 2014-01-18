@@ -1,0 +1,15 @@
+<%= form_for(@user) do |f| %>
+  <center>
+    Goals: <%= workout.name %>
+    <%= f.label :name, "I will do this exercise for " %>
+    <%= f.text_field :duration, :size => 13, :placeholder => "this many" %>
+    <%= f.select
+
+    <% end -%>
+    <%= f.label :name, " every " %>
+    <!-- drop down menu for days, weeks, months, years -->
+    <%= f.label :name, "." %>
+
+    <%= f.submit "Add Goal", data: { disable_with: 'Saving...' } %>
+  </center>
+<% end %>
