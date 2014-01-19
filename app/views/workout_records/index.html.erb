@@ -24,13 +24,14 @@
           <th>Total</th>
       </thead>
       <tbody>
-        <% @workouts.each do |w| %>
-        <tr>
-          <td>w.name</td>
-          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration } %></td>
-          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration unless r.created_at.to_date != Date.today } %></td>
-          <td><%= w.workout_records.inject(0){ |sum,r| sum += r.duration unless r.created_at.to_date.month != Date.today.month } %></td>
-          <% 
+        <!-- See WorkoutsHelper for functionality -->
+        <% record_totals.each do |w,a| %>
+          <tr>
+            <td><%= w.name %></td>
+            <% for i in (0..10) %>
+            <td><%= a[i] %></td>
+            <% end %>
+          </tr>
     <% end %>
   </div>
 </div>
