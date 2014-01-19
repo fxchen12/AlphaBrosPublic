@@ -6,7 +6,7 @@
   <table>
       <tbody>
         <% @workouts.each do |workout| %>
-          <tr class="goal_row">
+          <tr>
             <td class="goals_workout_name"><%= workout.name %></td>
             <td class="progress"> Goal text and progress bar go here. </td>
             <td class="goal_button">
@@ -29,7 +29,6 @@
         <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
       </div>
     <% end %>
-
     <br>
   </div>
 </div>

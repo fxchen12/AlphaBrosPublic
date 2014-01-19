@@ -2,12 +2,11 @@
   <div class="xbutton">[x]</div>
   <center>
     Goals: <%= workout.name %>
-    <%= f.label :name, "I will do this exercise for " %>
-    <%= f.text_field :duration, :size => 13, :placeholder => "this many" %>
-    <!-- drop down menu for minutes or miles -->
-    <%= f.label :name, " every " %>
-    <!-- drop down menu for days, weeks, months, years -->
-    <%= f.label :name, "." %>
+    <%= f.label :number, "I will do this exercise for " %>
+    <%= f.text_field :number, :size => 13, :placeholder => "this many" %>
+    <%= f.select :metric, [['Miles','miles'],['Minutes','minutes']] %>
+    <%= f.label :time_range, " every " %>
+    <%= f.select :time_range, [['Day','day'],['Week','week'],['Month','month'],['Year','year']] %>.
 
     <%= f.submit "Add Goal", data: { disable_with: 'Saving...' } %>
   </center>
