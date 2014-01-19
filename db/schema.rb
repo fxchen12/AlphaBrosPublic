@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119025345) do
+ActiveRecord::Schema.define(version: 20140119043347) do
 
   create_table "goals", force: true do |t|
     t.integer  "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140119025345) do
     t.string   "remember_token"
     t.string   "name"
     t.text     "achievements"
+    t.string   "time_zone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

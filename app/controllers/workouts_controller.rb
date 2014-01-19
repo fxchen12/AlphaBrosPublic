@@ -12,6 +12,7 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(workout_params)
+    @workout.user_id = current_user.id
 
     if @workout.save
       redirect_to workouts_url, notice: 'New workout added!'

@@ -1,23 +1,35 @@
 <table>
   <tbody>
     <tr>
-      <td id="name">
-        <%= form_for(@user) do |f| %>
-          <% if @user.errors.any? %>
-            <div id="error_explanation">
-              <ul>
-              <% @user.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
+      <td>
+        <div id="name">
+          <%= form_for(@user) do |f| %>
+            <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
 
             <%= f.label :name, "Display Name" %>
             <%= f.text_field :name %>
 
             <%= f.submit "Update Name", data: { disable_with: 'Saving...' } %>
-        <% end %>
+          <% end %>
+        </div>
+        <br>
+        <div id="time_zone">
+          <%= form_for(@user) do |f| %>
+
+            <%= f.label :time_zone, "Time Zone" %>
+            <%= f.select :time_zone, TIME_ZONES %>
+
+            <%= f.submit "Update Time Zone", data: { disable_with: 'Saving...' } %>
+          <% end %>
+        </div>
       </td>
 
       <td id="password">

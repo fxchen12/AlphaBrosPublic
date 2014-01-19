@@ -22,6 +22,8 @@
 	<%= f.label :password_confirmation, "Password Confirmation" %>
 
 	<%= f.password_field :password_confirmation %>
+
+    <%= f.hidden_field :time_zone %>
 	<br>
 
     <%= f.submit "Register", data: { disable_with: 'Creating Account...' } %>
