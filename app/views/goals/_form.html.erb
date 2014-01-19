@@ -1,11 +1,9 @@
-<%= form_for(@user) do |f| %>
+<%= form_for(@goal) do |f| %>
   <center>
     Goals: <%= workout.name %>
     <%= f.label :name, "I will do this exercise for " %>
     <%= f.text_field :duration, :size => 13, :placeholder => "this many" %>
-    <%= f.select
-
-    <% end -%>
+    <!-- drop down menu for minutes or miles -->
     <%= f.label :name, " every " %>
     <!-- drop down menu for days, weeks, months, years -->
     <%= f.label :name, "." %>

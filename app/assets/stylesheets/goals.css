@@ -23,9 +23,35 @@ tr.goal_row
 
 }
 
+td.goals_workout_name
+{
+  padding-top: 30px;
+  padding-left:75px;
+  width:30%;
+  font-size:24pt;
+  vertical-align: middle;
+}
+
+td.progress
+{
+  padding-top:30px;
+  padding-left:30px;
+  padding-right:30px;
+  width:50%;
+  vertical-align: middle;
+}
+
 td.goal_button
 {
+  padding-top:30px;
+}
 
+td.goal_button img
+{
+  cursor:pointer;
+  width:30px;
+  height:30px;
+  vertical-align: middle;
 }
 
 div.workout_goals
