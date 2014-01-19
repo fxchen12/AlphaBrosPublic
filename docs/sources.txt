@@ -24,6 +24,7 @@ Sources (technical):
   - http://www.w3schools.com/cssref/pr_padding-top.asp
   - http://www.w3schools.com/cssref/pr_background-image.asp
   - http://www.w3schools.com/cssref/sel_hover.asp
+- http://www.iana.org/time-zones
 
 Inspirations:
 - http://www.apple.com/

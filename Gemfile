@@ -47,3 +47,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'valid_email'
 
 gem 'jquery-turbolinks'
+
+gem 'detect_timezone_rails'

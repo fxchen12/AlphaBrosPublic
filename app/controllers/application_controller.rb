@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   before_action :require_login
+  around_filter :user_time_zone, :if => :current_user
 
   private
 
@@ -14,5 +15,9 @@ class ApplicationController < ActionController::Base
 
   def jump_to_dashboard
     redirect_to '/dashboard' unless !signed_in?
+  end
+
+  def user_time_zone(&block)
+    Time.use_zone(current_user.time_zone, &block)
   end
 end
