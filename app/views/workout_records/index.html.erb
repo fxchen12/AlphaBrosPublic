@@ -24,7 +24,7 @@
           <th>Total</th>
       </thead>
       <tbody>
-        <!-- See WorkoutsHelper for functionality -->
+        <!-- See WorkoutsHelper for record_totals functionality -->
         <% record_totals.each do |w,a| %>
           <tr>
             <td><%= w.name %></td>
@@ -32,6 +32,8 @@
             <td><%= a[i] %></td>
             <% end %>
           </tr>
-    <% end %>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
