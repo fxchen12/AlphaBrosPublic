@@ -5,10 +5,40 @@
   <div class='goals_container'>
   <table>
       <tbody>
-        <% @workouts.each do |workout| %>
+        <% current_user.workouts.each do |workout| %>
           <tr>
             <td class="goals_workout_name"><%= workout.name %></td>
-            <td class="progress"> Goal text and progress bar go here. </td>
+            <% if workout.goals[-1] != nil %>
+              <td class="goal_statement"> I will do this exercise for <%= workout.goals[-1].number %> <%= workout.goals[-1].metric %> every <%= workout.goals[-1].time_range %>.
+             </td>
+            <% end %>
+            <td class="progress">
+              <% if workout.goals[-1] != nil %>
+                <!-- Recovering index of relevant data point from goal type. -->
+                <% i = 0 %>
+                <% if workout.goals[-1].metric == "miles" %>
+                  <% i += 5 %>
+                <% end %>
+                <% if workout.goals[-1].time_range == "week" %>
+                  <% i += 1 %>
+                <% elsif workout.goals[-1].time_range == "month" %>
+                  <% i += 2 %>
+                <% elsif workout.goals[-1].time_range == "year" %>
+                  <% i += 3 %>
+                <% end %>
+                <% record_totals.each do |w,a| %>
+                  <% if w == workout %>
+                    <% if a[i] >= workout.goals[-1].number %>
+                      <% current_progress = 100 %>
+                    <% else %>
+                      <% current_progress = (100 * a[i].to_f / workout.goals[-1].number.to_f).to_i %>
+                    <% end %>
+                    <%= current_progress.to_s + '% complete' %>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+            </td>
             <td class="goal_button">
               <%=
                 image_tag("goal_button_gray.png",
@@ -24,7 +54,7 @@
       </tbody>
     </table>
 
-    <% @workouts.each do |workout| %>
+    <% current_user.workouts.each do |workout| %>
       <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
         <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
       </div>

@@ -7,6 +7,7 @@
     <%= f.select :metric, [['Miles','miles'],['Minutes','minutes']] %>
     <%= f.label :time_range, " every " %>
     <%= f.select :time_range, [['Day','day'],['Week','week'],['Month','month'],['Year','year']] %>.
+    <%= f.hidden_field :workout_id, :value => workout.id %>
 
     <%= f.submit "Add Goal", data: { disable_with: 'Saving...' } %>
   </center>
