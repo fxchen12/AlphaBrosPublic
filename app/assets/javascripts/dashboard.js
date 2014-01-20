@@ -9,6 +9,7 @@ $(function() {
             var cover = $(".dash_cover");
             form.show();
             cover.show();
+            $("#workout_record_duration").focus();
             cover.click(function() {
                 cover.hide();
                 form.hide();

@@ -1,4 +1,7 @@
 <%= form_for(:session, url: sessions_path) do |f| %>
+    
+    <div class="xbutton">[x]</div>
+
     <%= f.label :email, "Email" %>
     <%= f.text_field :email %>
 
@@ -9,7 +12,3 @@
 
     <%= f.submit "Sign in", data: { disable_with: 'Signing in...' } %>
 <% end %>
-
-<p>
-    New user? <%= link_to "Register here!", root_url + '#register' %>
-</p>

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
             redirect_to '/workouts'
         else
             flash[:error] = 'Invalid email/password combination'
-            render 'new'
+            redirect_to root_url
         end
     end
 

@@ -14,7 +14,8 @@ class UsersController < ApplicationController
             flash[:success] = "Your account has been created!"
             redirect_to '/dashboard'
         else
-            redirect_to root_url
+            flash[:error] = "Invalid registration, please try again."
+            render :new
         end
     end
     
