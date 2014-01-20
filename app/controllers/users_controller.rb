@@ -17,7 +17,7 @@ class UsersController < ApplicationController
             redirect_to root_url
         end
     end
-    
+
     # User settings page
     def show
         @user = current_user

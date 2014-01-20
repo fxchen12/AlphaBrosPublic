@@ -12,6 +12,9 @@ class GoalsController < ApplicationController
       if @goal.save
         flash[:success] = "New goal set!"
         redirect_to goals_url
+      else
+        flash[:error] = @goal.errors.full_messages[0].split(' ')[1..-1].join(' ')
+        redirect_to goals_url
       end
     end
 
