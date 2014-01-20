@@ -5,10 +5,17 @@
   <div class='goals_container'>
   <table>
       <tbody>
-        <% @workouts.each do |workout| %>
+        <% current_user.workouts.each do |workout| %>
           <tr>
             <td class="goals_workout_name"><%= workout.name %></td>
-            <td class="progress"> Goal text and progress bar go here. </td>
+            <% if workout.goals[-1] != nil %>
+              <td class="goal_statement"> I will do this exercise for <%= workout.goals[-1].number %> <%= workout.goals[-1].metric %> every <%= workout.goals[-1].time_range %>.
+              </td>
+              <td class="progress">
+                <% current_progress = get_current_progress(workout,workout.goals[-1]) %>
+                <%= current_progress.to_s + '% complete' %>
+              </td>
+            <% end %>
             <td class="goal_button">
               <%=
                 image_tag("goal_button_gray.png",
@@ -24,7 +31,7 @@
       </tbody>
     </table>
 
-    <% @workouts.each do |workout| %>
+    <% current_user.workouts.each do |workout| %>
       <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
         <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
       </div>

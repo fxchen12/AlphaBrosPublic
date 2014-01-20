@@ -18,7 +18,7 @@ class UsersController < ApplicationController
             render :new
         end
     end
-    
+
     # User settings page
     def show
         @user = current_user

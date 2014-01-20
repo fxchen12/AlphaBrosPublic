@@ -20,17 +20,40 @@
                 )
               %>
             </td>
+
             <td class="start_button">
-              <%=
-                image_tag("blue_chevron.png",
-                  :onmouseover => "this.src='/assets/blue_chevron_darker.png'",
-                  :onmouseout => "this.src='/assets/blue_chevron.png'",
-                  :class => "start_image",
-                  :id => workout.id
-                )
-              %>
+              <% if workout.goals[-1] != nil and get_current_progress(workout,workout.goals[-1]) == 100 %>
+                <%=
+                  image_tag("green_chevron.png",
+                    :onmouseover => "this.src='/assets/green_chevron_darker.png'",
+                    :onmouseout => "this.src='/assets/green_chevron.png'",
+                    :class => "start_image",
+                    :id => workout.id
+                  )
+                %>
+              <% else %>
+                <%=
+                  image_tag("white_chevron.png",
+                    :onmouseover => "this.src='/assets/white_chevron_darker.png'",
+                    :onmouseout => "this.src='/assets/white_chevron.png'",
+                    :class => "start_image",
+                    :id => workout.id
+                  )
+                %>
+              <% end %>
             </td>
             <td class="workout_name"><%= workout.name %></td>
+            <td class="workout_goal_info">
+                <% if workout.goals[-1] != nil %>
+                  <% if get_current_progress(workout,workout.goals[-1]) == 100 %>
+                    (goal complete)
+                  <% else %>
+                    (goal not complete)
+                  <% end %>
+              <% else %>
+                (goal not set)
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>
