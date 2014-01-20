@@ -4,14 +4,16 @@
 
             <h1>Journey</h1>
 
-            <%= render "quotes" %>
+            <% QUOTES.shuffle.each do |q| %>
+                <div class="quotes" style="display:none;"><p style="display:table-cell; vertical-align:middle;"><em><%= q %></em></p></div>
+            <% end %>
         </header>
 
         <br><br>
 
         <footer>
             <a id="loginButton" class="button">Login</a><br>
-			<div id="loginBox"><%= render "sessions/form" %></div><br>
+            <div id="loginBox"><%= render "sessions/form" %></div><br>
             <a href="#register" class="button slow_scroll">Register</a>
         </footer>
     </section>

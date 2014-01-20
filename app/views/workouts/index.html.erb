@@ -8,7 +8,7 @@
     <!-- Main table to display workout rows -->
     <table>
       <tbody>
-        <% @workouts.each do |workout| %>
+        <% current_user.workouts.each do |workout| %>
           <tr class="workout_row">
             <td class="delete_button">
               <%=
@@ -37,7 +37,7 @@
     </table>
 
     <!-- Overlay to display workout record entry form -->
-    <% @workouts.each do |workout| %>
+    <% current_user.workouts.each do |workout| %>
       <div class="workout_record" id="<%= workout.id %>" style="display:none;">
         <%= render :partial => 'workout_records/form', :locals => { :workout => workout } %>
       </div>

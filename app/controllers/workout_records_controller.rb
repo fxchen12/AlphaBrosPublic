@@ -6,8 +6,9 @@ class WorkoutRecordsController < ApplicationController
 
   def create
     @workout_record = WorkoutRecord.new(workout_record_params)
+    @workout_record.user_id = current_user.id
 
-    if @workout_record.save
+    if @workout_record.save and @workout_record.workout.user == current_user
       flash[:success] = "New workout record added!"
       redirect_to workouts_url
     else
