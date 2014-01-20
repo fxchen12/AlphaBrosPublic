@@ -1,6 +1,6 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
-    has_many :workout_records, dependent: :destroy
+    has_many :workout_records
 
     include WorkoutsHelper
 

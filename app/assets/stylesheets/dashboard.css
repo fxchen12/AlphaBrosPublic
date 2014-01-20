@@ -83,12 +83,16 @@ div.dash_cover
   z-index: 100;
 }
 
-
 .new_workout_record input,
 .new_workout_record input[type="submit"]
 {
   display:block;
   margin-top:15px;
+}
+
+.new_workout input[type="submit"]
+{
+  display:none;
 }
 
 .xbutton

@@ -13,16 +13,16 @@ module WorkoutsHelper
         current_user.workouts.each do |w|
             # Today, This Week, This Month, This Year, Total [x2 for time & distance]
             inner_array = [
-            w.sum_field_by_time_range(:duration, method(:this_day)),
-            w.sum_field_by_time_range(:duration, method(:this_week)),
-            w.sum_field_by_time_range(:duration, method(:this_month)),
-            w.sum_field_by_time_range(:duration, method(:this_year)),
-            w.sum_field_by_time_range(:duration, method(:total)),
-            w.sum_field_by_time_range(:distance, method(:this_day)),
-            w.sum_field_by_time_range(:distance, method(:this_week)),
-            w.sum_field_by_time_range(:distance, method(:this_month)),
-            w.sum_field_by_time_range(:distance, method(:this_year)),
-            w.sum_field_by_time_range(:distance, method(:total))
+                w.sum_field_by_time_range(:duration, method(:this_day)),
+                w.sum_field_by_time_range(:duration, method(:this_week)),
+                w.sum_field_by_time_range(:duration, method(:this_month)),
+                w.sum_field_by_time_range(:duration, method(:this_year)),
+                w.sum_field_by_time_range(:duration, method(:total)),
+                w.sum_field_by_time_range(:distance, method(:this_day)),
+                w.sum_field_by_time_range(:distance, method(:this_week)),
+                w.sum_field_by_time_range(:distance, method(:this_month)),
+                w.sum_field_by_time_range(:distance, method(:this_year)),
+                w.sum_field_by_time_range(:distance, method(:total))
             ]
             workout_hash[w] = inner_array
         end
