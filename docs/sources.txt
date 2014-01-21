@@ -23,6 +23,9 @@ Sources (technical):
 - https://www.ruby-forum.com/
 - http://www.ruby-doc.org/
 - http://www.quora.com/
+- https://www.ruby-toolbox.com/
+- https://github.com/jfelchner/ruby-progressbar
+- https://github.com/michelson/lazy_high_charts
 
 Inspirations:
 - http://www.apple.com/
