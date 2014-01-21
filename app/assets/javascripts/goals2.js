@@ -20,7 +20,7 @@ $(function() {
         });
     }
 
-    $('#bar_graph').highcharts({
+    $('#line_graph').highcharts({
         chart: {
             backgroundColor: {
                 linearGradient: [0, 0, 500, 500],
@@ -29,7 +29,7 @@ $(function() {
                     [1, 'rgba(250, 250, 250, .20)']
                 ]
             },
-            type: 'bar',
+            type: 'line',
 
             events: {
                 load: applyGraphGradient
@@ -43,19 +43,22 @@ $(function() {
             text: 'Goal Progress'
         },
         xAxis: {
-            categories: ['This Exercise','Another Excercise', 'Yet another one']
+             type: 'datetime',
+            dateTimeLabelFormats: {
+                day: '%e. %b'
+            },
+             maxZoom: 48 * 3600 * 1000,
+             minRange: 48 * 3600 * 1000
+
+            
         },
         yAxis: {
-            title: {
-                text: '% Complete'
-            },
-            minRange: 100,
-            min: 0
+            
 
         },
         series: [{
             name: 'Percent Complete',
-            data: [50,40,100]
+            data: [50,40,100,30,20,50,15]
         }]
     });
 });
