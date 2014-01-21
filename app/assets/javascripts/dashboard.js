@@ -24,5 +24,7 @@ $(function() {
         }, function() {
             $(this).find("img").attr('src', '/assets/delete_button_gray.png');
         });
+
+
     }
 });
