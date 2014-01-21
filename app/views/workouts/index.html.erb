@@ -12,11 +12,11 @@
           <tr class="workout_row">
             <td class="delete_button">
               <%=
-                link_to(
-                  image_tag("delete_button_gray.png", :class => "delete_image"),
-                  workout,
-                  :method => :delete,
-                  data: { confirm: "Delete this workout?" }
+                image_tag("delete_button_gray.png", 
+                  :onmouseover => "this.src='assets/delete_button_red.png'",
+                  :onmouseout => "this.src='assets/delete_button_gray.png'",
+                  :class => "delete_image", 
+                  :id => workout.id
                 )
               %>
             </td>
@@ -66,6 +66,14 @@
       </div>
     <% end %>
 
+    <!-- Overlay to display workout delete confirmation -->
+    <% current_user.workouts.each do |workout| %>
+      <div class="delete_confirmation" id="<%= workout.id %>" style="display:none;">
+        <%= render :partial => 'workouts/delete', :locals => { :workout => workout } %>
+      </div>
+    <% end %>
+
+    <!-- Input field for new activity -->
     <%= render 'form' %>
 
     <br>

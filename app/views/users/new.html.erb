@@ -1,9 +1,7 @@
 <!-- Header -->
     <section id="header" class="dark">
         <header>
-
             <h1>Journey</h1>
-
             <% QUOTES.shuffle.each do |q| %>
                 <div class="quotes" style="display:none;"><p style="display:table-cell; vertical-align:middle;"><em><%= q %></em></p></div>
             <% end %>
@@ -12,8 +10,9 @@
         <br><br>
 
         <footer>
+            <div id="cover" style="display:none;"></div>
             <a id="loginButton" class="button">Login</a><br>
-            <div id="loginBox"><%= render "sessions/form" %></div><br>
+            <div id="loginBox" style="display:none;"><%= render "sessions/form" %></div><br>
             <a href="#register" class="button slow_scroll">Register</a>
         </footer>
     </section>

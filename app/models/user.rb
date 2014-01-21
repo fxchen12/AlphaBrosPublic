@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
     before_save { self.email = email.downcase }
     before_create :create_remember_token
     validates :email, presence: true, email: true, uniqueness: true
+    validates_presence_of :name
     has_secure_password
 
 def User.new_remember_token
