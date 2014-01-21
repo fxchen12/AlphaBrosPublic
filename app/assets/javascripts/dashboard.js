@@ -32,5 +32,7 @@ $(function() {
             del.slideDown();
             $(".dash_cover").fadeIn();
         });
+
+
     }
 });

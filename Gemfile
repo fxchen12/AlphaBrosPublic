@@ -49,3 +49,9 @@ gem 'valid_email'
 gem 'jquery-turbolinks'
 
 gem 'detect_timezone_rails'
+
+# For goals progress bar
+gem 'ruby-progressbar'
+
+# For graphs
+gem 'lazy_high_charts'
