@@ -17,7 +17,7 @@ class WorkoutsController < ApplicationController
       redirect_to workouts_url, notice: 'New workout added!'
     else
       flash[:error] = "Workout failed to save."
-      render 'workouts'
+      render :index
     end
   end
 
@@ -25,13 +25,13 @@ class WorkoutsController < ApplicationController
     if @workout.update(workout_params)
       redirect_to @workout, notice: 'Workout was successfully updated.'
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def destroy
     @workout.destroy
-    redirect_to workouts_url
+    render :index
   end
 
   private
