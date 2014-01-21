@@ -1,0 +1,4 @@
+Show all goals on a graph, with percentages achieved.
+
+Total number of every day in a week, amount of exercise in a week, use different colors to show different amounts of exercise.
+

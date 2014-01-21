@@ -22,6 +22,7 @@ Sources (technical):
 - http://favicon-generator.org/
 - https://www.ruby-forum.com/
 - http://www.ruby-doc.org/
+- http://www.quora.com/
 
 Inspirations:
 - http://www.apple.com/
