@@ -19,4 +19,25 @@ $(function() {
             });
         });
     }
+
+    $('#bar_graph').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Goal Progress'
+        },
+        xAxis: {
+            categories: ['This Exercise']
+        },
+        yAxis: {
+            title: {
+                text: '% Complete'
+            }
+        },
+        series: [{
+            name: 'Goal',
+            data: [50]
+        }]
+    });
 });

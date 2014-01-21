@@ -22,7 +22,7 @@ td.goals_workout_name
 {
   padding-top: 30px;
   padding-left:75px;
-  width:30%;
+  width:10%;
   font-size:24pt;
   vertical-align: middle;
 }
@@ -32,7 +32,7 @@ td.progress
   padding-top:30px;
   padding-left:30px;
   padding-right:30px;
-  width:50%;
+  width:10%;
   vertical-align: middle;
 }
 
