@@ -1,82 +1,39 @@
-<!-- Access user's array of achievements on this page by using @achievements-->
-
-<% text = [
-
-"Started My Journey",
-"Completed First Workout"
-# "Completed a Daily Goal",
-# "Completed a Weekly Goal",
-# "Completed a Monthly Goal",
-# "Completed a Yearly Goal",
-# "Completed 10 Workouts",
-# "Completed 25 Workouts",
-# "Completed 50 Workouts",
-# "Completed 10 Daily Goals",
-# "Completed 25 Daily Goals",
-# "Completed 50 Daily Goals",
-# "Completed 3 Weekly Goals",
-# "Completed 10 Weekly Goals",
-# "Completed 25 Weekly Goals",
-# "Completed 2 Monthly Goals",
-# "Completed 6 Monthly Goals",
-# "Completed 12 Monthly Goals",
-# "10 Hours of Exercise",
-# "100 Hours of Exercise",
-# "1000 Hours of Exercise",
-# "3 Hours in a Week",
-# "5 Hours in a Week",
-# "7 Hours in a Week",
-# "15 Hours in a Month",
-# "25 Hours in a Month",
-# "35 Hours in a Month",
-# "180 Hours in a Year",
-# "300 Hours in a Year",
-# "420 Hours in a Year",
-# "10 Miles Exercising",
-# "100 Miles Exercising",
-# "1000 Miles Exercising",
-# "10 Miles in a Week",
-# "15 Miles in a Week",
-# "20 Miles in a Week",
-# "50 Miles in a Month",
-# "75 Miles in a Month",
-# "100 Miles in a Month",
-# "600 Miles in a Year",
-# "900 Miles in a Year",
-# "1200 Miles in a Year"
-# TODO: Make this work in a separate file (_text); this is currently not possible.
-
-] %>
-
 <div class="achievements_background">
   <%= render '/layouts/navbar' %>
   <div class="achievements_container">
-      <table class="achievements_table">
-        <tbody>
-          <% row = 0 %>
+    <!-- Use @achievements for all achievements -->
+    <!-- Use @user_achievements for current_user's achievements -->
+    <!-- Use achievement.description for it's full name -->
+    <!-- Use achievement.name for its shorthand identifier -->
+    <!-- Use achievement.level for its difficulty (1-3) -->
+    <!-- Use achievement.id for its sequential id -->
+    <!-- Achievements are set in config/initializers/merit.rb -->
+    <table class="achievements_table">
+      <tbody>
+        <% row = 0 %>
+        <% column = 1 %>
+        <% while row < (@achievements.length / 4 + 1) %>
+          <tr class="achievement_row">
+            <% while column < 5 %>
+              <% if (row*4 + column) < @achievements.length + 1 %>
+                <td><%= image_tag 'achievement' + (row*4 + column).to_s + '.png' %></td>
+              <% end %>
+              <% column += 1 %>
+            <% end %>
+          </tr>
           <% column = 1 %>
-          <% while row < (text.length / 4 + 1) %>
-            <tr class="achievement_row">
-              <% while column < 5 %>
-                <% if (row*4 + column) < text.length + 1 %>
-                  <td><%= image_tag 'achievement' + (row*4 + column).to_s + '.png' %></td>
-                <% end %>
-                <% column += 1 %>
+          <tr class="achievement_text_row">
+            <% while column < 5 %>
+              <% if (row*4 + column) < @achievements.length + 1 %>
+                <td><%= @achievements[row*4 + column - 1].description %></td>
               <% end %>
-            </tr>
-            <% column = 1 %>
-            <tr class="achievement_text_row">
-              <% while column < 5 %>
-                <% if (row*4 + column) < text.length + 1 %>
-                  <td><%= text[row*4 + column - 1] %></td>
-                <% end %>
-                <% column += 1 %>
-              <% end %>
-            </tr>
-            <% column = 1 %>
-            <% row += 1 %>
-          <% end %>
-        </tbody>
-      </table>
+              <% column += 1 %>
+            <% end %>
+          </tr>
+          <% column = 1 %>
+          <% row += 1 %>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>

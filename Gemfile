@@ -35,19 +35,13 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+# For email validation
 gem 'valid_email'
 
+# To fix javascript with turbolinks page rendering
 gem 'jquery-turbolinks'
 
+# For timezone auto-detect on register
 gem 'detect_timezone_rails'
 
 # For goals progress bar
@@ -55,3 +49,6 @@ gem 'ruby-progressbar'
 
 # For graphs
 gem 'lazy_high_charts'
+
+# For Achievements
+gem 'merit'
