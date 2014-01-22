@@ -18,10 +18,24 @@
             <% end %>
             <td class="goal_button">
             </td>
+            <td class="progresss_bar">
+
+            </td>
           </tr>
         <% end %>
       </tbody>
     </table>
+
+  <div id="bar_graph" style="width:50%; height:200px"></div>
+
+    <% current_user.workouts.each do |workout| %>
+      <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
+        <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
+      </div>
+    <% end %>
+    <br>
+  </div>
+   <div id="line_graph" style="width:50%; height:200px"></div>
 
     <% current_user.workouts.each do |workout| %>
       <div class="workout_goals" id="<%= workout.id %>" style="display:none;">

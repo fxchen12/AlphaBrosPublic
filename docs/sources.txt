@@ -24,8 +24,9 @@ Sources (technical):
 - http://www.ruby-doc.org/
 - http://www.quora.com/
 - https://www.ruby-toolbox.com/
-- https://github.com/jfelchner/ruby-progressbar
 - https://github.com/michelson/lazy_high_charts
+- https://github.com/xiaods/highcharts-bootstrap
+- http://www.highcharts.com/
 
 Inspirations:
 - http://www.apple.com/
