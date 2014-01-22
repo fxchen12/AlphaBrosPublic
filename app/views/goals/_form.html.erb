@@ -9,15 +9,14 @@
     </div>
   <% end %>
 
-  <div class="xbutton">[x]</div>
   <center>
-    Goals: <%= workout.name %>
+    Goals: <%= current_workout.name %>
     <%= f.label :number, "I will do this exercise for " %>
     <%= f.text_field :number, :size => 13, :placeholder => "this many" %>
     <%= f.select :metric, [['Miles','miles'],['Minutes','minutes']] %>
     <%= f.label :time_range, " every " %>
     <%= f.select :time_range, [['Day','day'],['Week','week'],['Month','month'],['Year','year']] %>.
-    <%= f.hidden_field :workout_id, :value => workout.id %>
+    <%= f.hidden_field :workout_id, :value => current_workout.id %>
 
     <%= f.submit "Add Goal", data: { disable_with: 'Saving...' } %>
   </center>

@@ -18,23 +18,45 @@ div.dashboard_container
   background-color:rgba(255,255,255,0.57);
 }
 
-tr.workout_row td
+table.dropdown_table
 {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  vertical-align: middle;
+  height:100px;
+  width:100%;
 }
 
 td.delete_button
 {
-  width: 10%;
-  text-align: center;
+  padding-top: 9px;
+  width: auto;
+  text-align:right;
+  vertical-align:middle;
+}
+
+td.dropdown
+{
+  width:350px;
+  vertical-align:middle;
+}
+
+td.add_button
+{
+  padding-top: 9px;
+  width:auto;
+  text-align:left;
+  vertical-align:middle;
 }
 
 img.delete_image
 {
-  width:40px;
-  height:40px;
+  width:auto;
+  height:auto;
+  cursor:pointer;
+}
+
+img.add_image
+{
+  width:auto;
+  height:auto;
   cursor:pointer;
 }
 
@@ -45,6 +67,22 @@ div.delete_confirmation
   left: 38%;
   margin-top: 40px;
   width: 24%;
+  padding: 15px;
+  padding-bottom: 60px;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: .25em;
+  line-height: 125%;
+  z-index: 110;
+}
+
+div.add_input
+{
+  position: absolute;
+  top: 11%;
+  left: 38%;
+  margin-top: 40px;
+  width: 40%;
   padding: 15px;
   padding-bottom: 60px;
   background-color: white;
@@ -68,6 +106,14 @@ input[value="Cancel"]
   bottom:0.5em;
   right:0.5em;
   width:6em;
+}
+
+input[value="Record Workout"]
+{
+
+  padding-top:0em;
+  height:3em;
+  width:15em;
 }
 
 td.start_button
@@ -136,4 +182,9 @@ div.dash_cover
   right: 7px;
   top: 5px;
   cursor:pointer;
+}
+
+.hide
+{
+  display: none;
 }

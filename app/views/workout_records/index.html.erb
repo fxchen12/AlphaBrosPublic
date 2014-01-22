@@ -1,8 +1,12 @@
 <!-- This is the page to display a summary of workout progress -->
 <div class="progress_background">
   <%= render '/layouts/navbar' %>
-  
+
   <div class="progress_container">
+    <%= render '/layouts/dropdown' %>
+    <center>
+      <%= button_to "All Workouts", "javascript:;", :class => "all_button" %>
+    </center>
     <table>
       <thead>
         <tr>

@@ -1,7 +1,7 @@
 $(function() {
 
     if($("#loginBox").length) {
-        
+
         $("#loginButton").click(function() {
             $("#cover").fadeIn();
             $("#loginBox").slideDown();

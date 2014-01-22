@@ -1,6 +1,6 @@
 module GoalsHelper
 
-  def get_current_progress(workout,goal)
+  def get_current_progress(goal)
     i = 0
     if goal.metric == "miles"
       i += 5
@@ -14,7 +14,7 @@ module GoalsHelper
     end
     current_progress = 0
     record_totals.each do |w,a|
-      if w == workout
+      if w == goal.workout
         if a[i] >= goal.number
           current_progress = 100
         else

@@ -6,75 +6,25 @@
 
   <div class="dashboard_container">
     <!-- Main table to display workout rows -->
-    <table>
-      <tbody>
-        <% current_user.workouts.each do |workout| %>
-          <tr class="workout_row">
-            <td class="delete_button">
-              <%=
-                image_tag("delete_button_gray.png", 
-                  :onmouseover => "this.src='assets/delete_button_red.png'",
-                  :onmouseout => "this.src='assets/delete_button_gray.png'",
-                  :class => "delete_image", 
-                  :id => workout.id
-                )
-              %>
-            </td>
+    <%= render '/layouts/dropdown' %>
 
-            <td class="start_button">
-              <% if workout.goals[-1] != nil and get_current_progress(workout,workout.goals[-1]) == 100 %>
-                <%=
-                  image_tag("green_chevron.png",
-                    :onmouseover => "this.src='/assets/green_chevron_darker.png'",
-                    :onmouseout => "this.src='/assets/green_chevron.png'",
-                    :class => "start_image",
-                    :id => workout.id
-                  )
-                %>
-              <% else %>
-                <%=
-                  image_tag("white_chevron.png",
-                    :onmouseover => "this.src='/assets/white_chevron_darker.png'",
-                    :onmouseout => "this.src='/assets/white_chevron.png'",
-                    :class => "start_image",
-                    :id => workout.id
-                  )
-                %>
-              <% end %>
-            </td>
-            <td class="workout_name"><%= workout.name %></td>
-            <td class="workout_goal_info">
-                <% if workout.goals[-1] != nil %>
-                  <% if get_current_progress(workout,workout.goals[-1]) == 100 %>
-                    (goal complete)
-                  <% else %>
-                    (goal not complete)
-                  <% end %>
-              <% else %>
-                (goal not set)
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
+    <center>
+      <%= button_to "Record Workout", "javascript:;", :id => current_workout.id, :class => "record_button" %>
+    </center>
     <!-- Overlay to display workout record entry form -->
-    <% current_user.workouts.each do |workout| %>
-      <div class="workout_record" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'workout_records/form', :locals => { :workout => workout } %>
-      </div>
-    <% end %>
+    <div class="workout_record" id="<%= current_workout.id %>" style="display:none;">
+      <%= render :partial => 'workout_records/form', :locals => { :workout => current_workout } %>
+    </div>
 
     <!-- Overlay to display workout delete confirmation -->
-    <% current_user.workouts.each do |workout| %>
-      <div class="delete_confirmation" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'workouts/delete', :locals => { :workout => workout } %>
-      </div>
-    <% end %>
+    <div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
+      <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
+    </div>
 
     <!-- Input field for new activity -->
-    <%= render 'form' %>
+    <div class="add_input" style="display:none;">
+      <%= render :partial => 'workouts/form' %>
+    </div>
 
     <br>
   </div>

@@ -1,10 +1,12 @@
 <!-- Header -->
     <section id="header" class="dark">
         <header>
-            <h1>Journey</h1>
             <% QUOTES.shuffle.each do |q| %>
                 <div class="quotes" style="display:none;"><p style="display:table-cell; vertical-align:middle;"><em><%= q %></em></p></div>
             <% end %>
+
+            <h1>Journey</h1>
+            Move forward. Be well.
         </header>
 
         <br><br>
@@ -20,7 +22,9 @@
     <section id="register" class="main">
         <header>
             <div class="container">
-                <h2>Register</h2><br>
+                <h2>Register</h2>
+                Start your journey to better fitness habits.
+                <br>
                 <%= render "form" %>
             </div>
         </header>

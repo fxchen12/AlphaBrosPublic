@@ -26,9 +26,14 @@ class UsersController < ApplicationController
 
     def update
         @user = current_user
+        ignore_flash = false
+        # Check if only updating user's current workout
+        if params[:current_workout_id] != nil
+            ignore_flash = true
+        end
         if @user.update(update_params)
-            flash[:success] = "Your changes have been applied!"
-            redirect_to '/settings'
+            flash[:success] = "Your changes have been applied!" unless ignore_flash
+            redirect_to(:back)
         else
             render :show
         end
@@ -41,6 +46,6 @@ class UsersController < ApplicationController
         end
 
         def update_params
-            params.require(:user).permit(:name, :password, :password_confirmation, :time_zone)
+            params.require(:user).permit(:name, :password, :password_confirmation, :time_zone, :current_workout_id)
         end
 end

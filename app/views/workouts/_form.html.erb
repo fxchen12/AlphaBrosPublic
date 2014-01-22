@@ -1,17 +1,23 @@
-<%= form_for(@workout) do |f| %>
-  <% if @workout.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @workout.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div id="add_form">
+  <div class="xbutton">[x]</div>
+
+  <%= form_for(@workout) do |f| %>
+    <% if @workout.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+          <% @workout.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
+
+    <center>
+      <%= f.text_field :name, :placeholder => "Enter an activity to add...", :size => '40' %>
+    </center>
+    <br>
+    <%= f.submit "Ok", data: { disable_with: 'Adding...' } %>
   <% end %>
 
-  <center>
-    <%= f.text_field :name, :placeholder => "Enter an activity to add...", :size => '40' %>
-
-    <%= f.submit :class => 'hide' %>
-  </center>
-<% end %>
+  <%= button_to "Cancel", "javascript:;", :class => "cancel_button" %>
+</div>

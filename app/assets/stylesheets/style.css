@@ -511,7 +511,7 @@
 
     /* Quotes */
 
-    .quotes 
+    .quotes
     {
         display: table;
         position: absolute;
@@ -519,7 +519,7 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        top: 3.5em;
+        top: -10em;
         height: 3em;
     }​
 
@@ -1250,7 +1250,7 @@
         {
           margin-top:5px;
         }
-        
+
         #loginBox input[type="submit"]
         {
           margin-top:15px;

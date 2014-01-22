@@ -3,45 +3,35 @@
   <div class="goal_cover" style="display:none;"></div>
   <%= render '/layouts/navbar' %>
   <div class='goals_container'>
-  <table>
-      <tbody>
-        <% current_user.workouts.each do |workout| %>
-          <tr>
-            <td class="goals_workout_name"><%= workout.name %></td>
-            <% if workout.goals[-1] != nil %>
-              <td class="goal_statement"> I will do this exercise for <%= workout.goals[-1].number %> <%= workout.goals[-1].metric %> every <%= workout.goals[-1].time_range %>.
+    <%= render '/layouts/dropdown' %>
+    <center>
+      <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "goal_button" %>
+    </center>
+    <% if current_workout.goals[0] != nil %>
+      <table>
+        <tbody>
+          <% current_workout.goals.each do |goal| %>
+            <tr>
+              <td class="goal_delete_button">
+              </td>
+              <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
+              </td>
+              <td class="progress_bar">
+                <div id="graph" style="width:50%; height:200px;"></div>
               </td>
               <td class="progress">
-                <% current_progress = get_current_progress(workout,workout.goals[-1]) %>
+                <% current_progress = get_current_progress(goal) %>
                 <%= current_progress.to_s + '% complete' %>
               </td>
-            <% end %>
-            <td class="goal_button">
-            </td>
-            <td class="progresss_bar">
-
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-  <div id="bar_graph" style="width:50%; height:200px"></div>
-
-    <% current_user.workouts.each do |workout| %>
-      <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
-      </div>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     <% end %>
-    <br>
-  </div>
-   <div id="line_graph" style="width:50%; height:200px"></div>
 
-    <% current_user.workouts.each do |workout| %>
-      <div class="workout_goals" id="<%= workout.id %>" style="display:none;">
-        <%= render :partial => 'goals/form', :locals => { :workout => workout } %>
-      </div>
-    <% end %>
+    <div class="workout_goals" id="<%= current_workout.id %>" style="display:none;">
+        <%= render :partial => 'goals/form', :locals => { :workout => current_workout } %>
+    </div>
     <br>
   </div>
 </div>

@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
     @workout.user_id = current_user.id
 
     if @workout.save
+      current_user.update({:current_workout_id => @workout.id})
       redirect_to workouts_url, notice: 'New workout added!'
     else
       flash[:error] = "Workout failed to save."
@@ -31,7 +32,12 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    render :index
+    if current_user.workouts.empty?
+      current_user.update({:current_workout_id => nil})
+    else
+      current_user.update({:current_workout_id => current_user.workouts[0].id})
+    end
+    redirect_to :workouts
   end
 
   private

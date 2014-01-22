@@ -75,3 +75,10 @@ div.workout_goals
   line-height: 125%;
   z-index: 110;
 }
+
+input[value="Set New Goal"]
+{
+  padding-top:0em;
+  height:3em;
+  width:15em;
+}

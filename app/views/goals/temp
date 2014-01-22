@@ -1,9 +1,0 @@
-              (from goal_button) "incompatible marshal file format" error for Francis; disabling for now
-               <%=
-                image_tag("goal_button_gray.png",
-                  :onmouseover => "this.src='/assets/goal_button_gold.png'",
-                  :onmouseout => "this.src='/assets/goal_button_gray.png'",
-                  :class => "goal_image",
-                  :id => workout.id
-                )
-              %>
