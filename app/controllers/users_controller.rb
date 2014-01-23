@@ -32,7 +32,9 @@ class UsersController < ApplicationController
             ignore_flash = true
         end
         if @user.update(update_params)
-            flash[:success] = "Your changes have been applied!" unless ignore_flash
+            if !ignore_flash
+                flash[:success] = "Your changes have been applied!"
+            end
             redirect_to(:back)
         else
             render :show
