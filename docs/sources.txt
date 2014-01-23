@@ -29,6 +29,8 @@ Sources (technical):
 - https://github.com/xiaods/highcharts-bootstrap
 - https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 - http://www.highcharts.com/
+- http://api.jquery.com/
+- http://forums.asp.net/
 
 Inspirations:
 - http://www.apple.com/

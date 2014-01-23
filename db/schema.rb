@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20140122064556) do
     t.string   "time_zone"
     t.integer  "current_workout_id"
     t.integer  "sash_id"
-    t.integer  "level",           default: 0
+    t.integer  "level",              default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

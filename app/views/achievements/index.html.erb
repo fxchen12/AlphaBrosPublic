@@ -16,7 +16,7 @@
           <tr class="achievement_row">
             <% while column < 5 %>
               <% if (row*4 + column) < @achievements.length + 1 %>
-                <td><%= image_tag 'achievement' + (row*4 + column).to_s + '.png' %></td>
+                <td><center><%= image_tag 'achievement' + (row*4 + column).to_s + '.png' %></center></td>
               <% end %>
               <% column += 1 %>
             <% end %>
@@ -25,7 +25,7 @@
           <tr class="achievement_text_row">
             <% while column < 5 %>
               <% if (row*4 + column) < @achievements.length + 1 %>
-                <td><%= @achievements[row*4 + column - 1].description %></td>
+                <td><center><%= @achievements[row*4 + column - 1].description %></center></td>
               <% end %>
               <% column += 1 %>
             <% end %>

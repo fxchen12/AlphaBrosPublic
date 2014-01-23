@@ -13,11 +13,68 @@
           <% current_workout.goals.each do |goal| %>
             <tr>
               <td class="goal_delete_button">
+                <%=
+                image_tag("delete_button_gray.png",
+                  :onmouseover => "this.src='assets/delete_button_red.png'",
+                  :onmouseout => "this.src='assets/delete_button_gray.png'",
+                  :class => "delete_image",
+                  :id => current_user.current_workout_id
+                )
+                %>
               </td>
               <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
               </td>
               <td class="progress_bar">
-                <div id="graph" style="width:50%; height:200px;"></div>
+                <div id="graph" style="width:50%; height:100px;"></div>
+                <!-- How do you pass in a Ruby on Rails variable into this Javascript? -->
+                <script>
+                $(function () {
+                    $('#graph').highcharts({
+                      chart: {
+                          type: 'bar',
+                          backgroundColor: {
+                          linearGradient: [0, 0, 500, 500],
+                          stops: [
+                            [0, 'rgba(250, 250, 250, .50)'],
+                            [1, 'rgba(250, 250, 250, .50)']
+                          ]
+                        }
+                      },
+                      title: {
+                          text: null
+                      },
+                      xAxis: {
+                        categories: ['Percent']
+                      },
+                      yAxis: {
+                          min: 0,
+                          title: {
+                              text: null
+                          }
+                      },
+                      plotOptions: {
+                          bar: {
+                              stacking: 'percent'
+                          }
+                      },
+                      legend: {
+                        enabled: false
+                      },
+                      colors: [
+                        '#909090',
+                        '#006600'
+                      ],
+                      series: [{
+                          name: 'Incomplete',
+                          data: [70]
+                      },
+                       {
+                          name: 'Complete',
+                          data:[30]
+                       }]
+                  });
+                });
+              </script>
               </td>
               <td class="progress">
                 <% current_progress = get_current_progress(goal) %>

@@ -18,27 +18,6 @@ $(function() {
                 form.hide();
             });
         });
-
-        $('#graph').highcharts({
-            chart: {
-                type: 'bar',
-            },
-            title: {
-                text: 'Goal Progress'
-            },
-            xAxis: {
-                categories: ['This Exercise']
-            },
-            yAxis: {
-                title: {
-                    text: '% Complete'
-                }
-            },
-            series: [{
-                name: 'Percent Complete',
-                data: [50]
-            }]
-        });
     }
 });
 

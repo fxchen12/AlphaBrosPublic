@@ -44,11 +44,5 @@ gem 'jquery-turbolinks'
 # For timezone auto-detect on register
 gem 'detect_timezone_rails'
 
-# For goals progress bar
-gem 'ruby-progressbar'
-
-# For graphs
-gem 'lazy_high_charts'
-
 # For Achievements
 gem 'merit'
