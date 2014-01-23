@@ -22,7 +22,7 @@ Password: AlphaBros
 
 5. Ruby on Rails
 
-6. jQuery (For more details on libraries etc. for 5 and 6, see the Gemfile and docs/sources.txt)
+6. jQuery (for more details on libraries etc. for 5 and 6, see the Gemfile and docs/sources.txt)
 
 7. Firefox
 
