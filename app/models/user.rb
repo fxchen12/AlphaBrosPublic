@@ -31,6 +31,6 @@ private
         Goal.create(workout: w, user: self, number: 60, 
             metric: "minutes", time_range: "day")
         Workout.create(name: "Running", user: self)
-        self.current_workout_id = w.id
+        self.update({:current_workout_id => @workout.id})
     end
 end
