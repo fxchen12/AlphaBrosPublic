@@ -14,7 +14,7 @@
 
 3. In general, except for the changes to our plans mentioned in Question 1, we are on schedule in terms of implementing our MVP.
 
-4. We would like to implement many more graphs, for which the back end framework is already in place. Additionally, we would like to generally improve flow and aesthetics across the site.
+4. We would like to implement many more graphs and achievements, for which the back end framework is already in place. Additionally, we would like to generally improve flow and aesthetics across the site.
 
 5. Ruby on Rails
 
