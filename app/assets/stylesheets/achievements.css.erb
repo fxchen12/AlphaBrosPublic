@@ -6,7 +6,7 @@ div.achievements_background
   overflow:auto;
   /*padding-bottom: -6em;*/
   margin-bottom:1em;
-    background-image: url('background18.jpg');
+    background-image: url(<%= asset_path 'background18.jpg' %>);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -41,7 +41,7 @@ tr.achievement_text_row
 
 img.false
 {
-  filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+  filter: url(<%= asset_path 'filters.svg#grayscale' %>); /* Firefox 3.5+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }

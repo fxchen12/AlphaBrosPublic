@@ -1,7 +1,6 @@
 ﻿@charset 'UTF-8';
 
-@font-face{font-family:'FontAwesome';src:url('fontawesome-webfont.eot?v=4.0.1');src:url('fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('fontawesome-webfont.woff?v=4.0.1') format('woff'),url('fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-
+@font-face{font-family:'FontAwesome';src:url(<%= asset_path 'fontawesome-webfont.eot?v=4.0.1' %>);src:url(<%= asset_path 'fontawesome-webfont.eot?#iefix&v=4.0.1' %>) format('embedded-opentype'),url(<%= asset_path 'fontawesome-webfont.woff?v=4.0.1' %>) format('woff'),url(<%= asset_path 'fontawesome-webfont.ttf?v=4.0.1' %>) format('truetype'),url(<%= asset_path 'fontawesome-webfont.svg?v=4.0.1#fontawesomeregular' %>) format('svg');font-weight:normal;font-style:normal}
 /*
     Tessellate 1.0 by HTML5 UP
     html5up.net | @n33co
@@ -228,7 +227,7 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background: url('assets/overlay.png');
+                background: url(<%= asset_path 'assets/overlay.png' %>);
             }
 
             .image img
@@ -427,7 +426,7 @@
                         right: 1em;
                         width: 1.25em;
                         height: 75%;
-                        background: url('assets/arrow.svg') center center no-repeat;
+                        background: url(<%= asset_path 'assets/arrow.svg' %>) center center no-repeat;
                         background-size: contain;
                         z-index: 1;
                     }
@@ -439,7 +438,8 @@
 
                         .dark form .select:before
                         {
-                            background: url('assets/dark-arrow.svg') center center no-repeat;
+                            background: url(<%= asset_path 'assets/dark-arrow.svg' %>
+                                ) center center no-repeat;
                             background-size: contain;
                         }
 
@@ -1173,7 +1173,7 @@
     {
         position: relative;
         margin: 0;
-        background: url('/assets/background17.jpg');
+        background: url(<%= asset_path '/assets/background17.jpg' %>);
         background-size: cover;
         background-position: center center;
         text-align: center;
@@ -1188,7 +1188,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: url('/assets/overlay.png');
+            background: url(<%= asset_path '/assets/overlay.png' %>);
         }
 
         #header > header,
@@ -1340,26 +1340,26 @@
 
             .main > .content.style1
             {
-                background: url('assets/bgtr.svg') top right no-repeat,
-                            url('assets/bgbl.svg') bottom left no-repeat,
-                            url('assets/bgbl.svg') bottom left no-repeat,
-                            url('assets/overlay.png'),
+                background: url(<%= asset_path 'assets/bgtr.svg' %>) top right no-repeat,
+                            url(<%= asset_path 'assets/bgbl.svg' %>) bottom left no-repeat,
+                            url(<%= asset_path 'assets/bgbl.svg' %>) bottom left no-repeat,
+                            url(<%= asset_path 'assets/overlay.png' %>),
                             linear-gradient(45deg, #b39c68, #a56365, #412e4c);
             }
 
             .main > .content.style2
             {
-                background: url('assets/bgtr.svg') top right no-repeat,
-                            url('assets/bgbl.svg') bottom left no-repeat,
-                            url('assets/overlay.png'),
+                background: url(<%= asset_path 'assets/bgtr.svg' %>) top right no-repeat,
+                            url(<%= asset_path 'assets/bgbl.svg' %>) bottom left no-repeat,
+                            url(<%= asset_path 'assets/overlay.png' %>),
                             linear-gradient(45deg, #384955, #655361, #85505f);
             }
 
             .main > .content.style3
             {
-                background: url('assets/bgtr.svg') top right no-repeat,
-                            url('assets/bgbl.svg') bottom left no-repeat,
-                            url('assets/overlay.png'),
+                background: url(<%= asset_path 'assets/bgtr.svg' %>) top right no-repeat,
+                            url(<%= asset_path 'assets/bgbl.svg' %>) bottom left no-repeat,
+                            url(<%= asset_path 'assets/overlay.png' %>),
                             linear-gradient(45deg, #5f796b, #3a4e59, #2f394e);
             }
 
