@@ -1,5 +1,5 @@
 <%= form_for(:session, url: sessions_path) do |f| %>
-    
+
     <div class="xbutton">[x]</div>
 
     <%= f.label :email, "Email" %>
@@ -10,5 +10,5 @@
 
     <br>
 
-    <%= f.submit "Sign in", data: { disable_with: 'Signing in...' }, :class => "coolButton" %>
+    <%= f.submit "Sign in", data: { disable_with: 'Signing in...' } %>
 <% end %>
