@@ -4,6 +4,7 @@
   <%= render '/layouts/navbar' %>
   <div class='goals_container'>
     <%= render '/layouts/dropdown' %>
+    <% if current_workout != nil %>
     <center>
       <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "goal_button" %>
     </center>
@@ -37,5 +38,6 @@
         <%= render :partial => 'goals/form', :locals => { :workout => current_workout } %>
     </div>
     <br>
+    <% end %>
   </div>
 </div>
