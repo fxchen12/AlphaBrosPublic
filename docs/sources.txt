@@ -42,6 +42,7 @@ Inspirations:
 Images:
 - http://www.morguefile.com/
 - http://www.flickr.com/photos/yellowstonenps
+- http://www.stockvault.net/
 
 Received help and/or advice from:
 - Course Staff
