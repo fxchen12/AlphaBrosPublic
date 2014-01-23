@@ -57,7 +57,7 @@ module WorkoutsHelper
             multiplier = 7
         elsif time_period == "month"
             multiplier = 30
-        elsif time_period = "year"
+        elsif time_period == "year"
             multiplier = 365
         end
 
@@ -75,10 +75,5 @@ module WorkoutsHelper
     def check_range(start_time,end_time,record)
         ((start_time.to_date..end_time.to_date) === record.created_at.to_date)
     end
-
-    def distance_history_by_day(workout,number)
-
-    end
-
 
 end
