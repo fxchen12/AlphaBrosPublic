@@ -5,7 +5,7 @@
   <div class='goals_container'>
     <%= render '/layouts/dropdown' %>
     <center>
-      <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "coolButton" %>
+      <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "goal_button" %>
     </center>
     <% if current_workout.goals[0] != nil %>
       <table>
