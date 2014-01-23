@@ -4,6 +4,7 @@
 
   <div class="progress_container">
     <%= render '/layouts/dropdown' %>
+    <% if current_workout != nil %>
     <center>
       <%= button_to "All Workouts", "javascript:;", :class => "all_button" %>
     </center>
@@ -44,6 +45,6 @@
     <script type="text/javascript" >
       var progress_data = <%= history_by_time_period(current_workout,10,:duration,"day") %> ;
     </script>
-
+    <% end %>
   </div>
 </div>

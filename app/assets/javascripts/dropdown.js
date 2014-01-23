@@ -1,5 +1,5 @@
 $(function() {
-    if ($("#dropdown_form").length) {
+    if ($(".dropdown_container").length) {
 
         $('#dropdown_form select').change(function(){
             $('#dropdown_form').submit();
