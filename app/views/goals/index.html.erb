@@ -13,14 +13,14 @@
           <% current_workout.goals.each do |goal| %>
             <tr>
               <td class="goal_delete_button">
-                <%=
+              <%=
                 image_tag("delete_button_gray.png",
-                  :onmouseover => "this.src='assets/delete_button_red.png'",
-                  :onmouseout => "this.src='assets/delete_button_gray.png'",
-                  :class => "delete_image",
+                  :onmouseover => "this.src=" + asset_path('delete_button_red.png'),
+                  :onmouseout => "this.src=" + asset_path('delete_button_gray.png'),
+                  :class => "delete_image_goals",
                   :id => current_user.current_workout_id
                 )
-                %>
+              %>
               </td>
               <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
               </td>

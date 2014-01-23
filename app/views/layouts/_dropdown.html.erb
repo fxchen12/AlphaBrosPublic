@@ -5,8 +5,8 @@
           <td class="delete_button">
             <%=
               image_tag("delete_button_gray.png",
-                :onmouseover => "this.src=" + asset_path('assets/delete_button_red.png'),
-                :onmouseout => "this.src=" + asset_path('assets/delete_button_gray.png'),
+                :onmouseover => "this.src=" + asset_path('delete_button_red.png'),
+                :onmouseout => "this.src=" + asset_path('delete_button_gray.png'),
                 :class => "delete_image",
                 :id => current_user.current_workout_id
               )
