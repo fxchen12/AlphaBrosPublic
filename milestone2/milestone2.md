@@ -4,6 +4,7 @@
 DEMO USER
 Email: fxchen12@gmail.com
 Password: AlphaBros
+<BR>(Of course, feel free to try both logging in as the demo user and creating a new user.)
 
 1. We're changing the target segment (from Question 3) to adults 18 and older. This makes sense, given the fact that we are college students and this allows the target segment to include most of our peers (helpful for user testing, market research, etc.) Also, it is the scope of the CDC study referenced in Milestone 1. We're also changing the target segment in that our product specifically focuses on aerobic exercise. We believe that this increases our site's focus and efficiency, fits well with our system, and addresses most of the needs identified.
 <BR>Additionally, there is no more timer in our application (Question 2 and Question 4). Furthermore, regarding Question 4, we would add steps to the use case involving viewing progress and achievements.
