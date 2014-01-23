@@ -1,4 +1,48 @@
 List of achievements:
+Goal Achievements:
+. met first goal
+. met 3 goals in a row
+. met 5 goals in a row
+. met 15 goals in a row
+. met 25 goals in a row
+. met 50 goals in a row
+. met a daily goal
+. met a weekly goal
+. met a monthly goal
+. met a yearly goal
+. make every goal for a week
+. make every goal for a month
+. make every goal for a year
+. create a goal
+. create 5 goals
+. create 10 goals
+. create 50 goals
+
+Workout achievements:
+. First workout
+. Workout for an hour in one workout
+. Workout for two hours in one workout
+. Workout for three hours in one workout
+. Workout for two hours in one day
+. Workout for three hours in one day
+. Workout for four hours in one day
+. Workout for five hours in one day
+. Workout for six hours in one day
+. Workout for three hours in a week
+. Workout for eight hours in a week
+. Workout for fifteen hours in a week
+. Workout for 25 hours in a week
+. Workout for 40 hours in a week 
+. Workout for 60 hours in a week
+. Meet CDC Requirements for a week
+. Meet CDC Requirements for a month
+. Meet CDC Requirements for a year
+. Excercise for one mile 
+. Excercise for two miles
+. Excercise for five miles
+
+
+
 
 1. First Workout
 2. Met your first goal
@@ -8,7 +52,4 @@ List of achievements:
 6. A year of health.
 7. Met CDC requirements
 8. Above and beyond, worked out double that of CDC requirements.
-9. Rated a workout.
-10. Amphibious: completed a swimming workout
-11. Talented: Completed a workout in every category.
- .... we could use 100+ achievements to start. Follow along these lines.
+9. 
