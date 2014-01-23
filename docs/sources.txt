@@ -26,8 +26,8 @@ Sources (technical):
 - http://www.ruby-doc.org/
 - http://www.quora.com/
 - https://www.ruby-toolbox.com/
-- https://github.com/michelson/lazy_high_charts
-- https://github.com/xiaods/highcharts-bootstrap
+- https://github.com/michelson/lazy_high_charts (we didn't use this gem, but the site provided some helpful information)
+- https://github.com/xiaods/highcharts-bootstrap (we didn't use this, but the site provided some helpful information)
 - https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 - http://www.highcharts.com/ (we used Highcharts extensively for our charts)
 - http://api.jquery.com/
