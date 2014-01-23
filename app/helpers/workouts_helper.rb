@@ -50,4 +50,35 @@ module WorkoutsHelper
         true
     end
 
+    # Returns an array where the 0th element is the total duration for (number) days ago, and the last is the total duration for the present day
+    def history_by_time_period(workout,number,metric,time_period)
+        multiplier = 1
+        if time_period == "week"
+            multiplier = 7
+        elsif time_period == "month"
+            multiplier = 30
+        elsif time_period = "year"
+            multiplier = 365
+        end
+
+        starting_time = Time.current.ago(number * 24 * 3600 * multiplier)
+        day_array = []
+        number.times do
+            next_time = starting_time.since(24*3600 * multiplier)
+            day_sum = workout.sum_field_by_custom_time_range(metric, method(:check_range), starting_time, next_time)
+            day_array << day_sum
+            starting_time = starting_time.since(24*3600 * multiplier)
+        end
+        return day_array
+    end
+
+    def check_range(start_time,end_time,record)
+        ((start_time.to_date..end_time.to_date) === record.created_at.to_date)
+    end
+
+    def distance_history_by_day(workout,number)
+
+    end
+
+
 end

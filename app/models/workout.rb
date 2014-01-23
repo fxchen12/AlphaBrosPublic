@@ -11,4 +11,8 @@ class Workout < ActiveRecord::Base
     def sum_field_by_time_range(field, time_f)
         self.workout_records.select{ |r| time_f.call(r) }.map{ |r| r.send(field).to_i }.sum
     end
+
+    def sum_field_by_custom_time_range(field, time_f, start_time, end_time)
+        self.workout_records.select{ |r| time_f.call(start_time, end_time, r) }.map{ |r| r.send(field).to_i }.sum
+    end
 end
