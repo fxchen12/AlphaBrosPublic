@@ -11,11 +11,12 @@ Sources (technical):
 - http://rubyonrails.org
 - http://railscasts.com/
 - http://dillinger.io/
+- http://nodejs.org/ (used locally only, to make Javascript work during development)
 - http://daringfireball.net/projects/markdown/syntax
 - http://www.minijs.com/plugins/8/
 - stackoverflow.com
 - http://www.w3schools.com
-- http://www.iana.org/time-zones
+- http://www.iana.org/time-zones (we used a Ruby gem for time zones)
 - http://www.favicon.cc/
 - Google
 - http://www.w3.org/2005/10/howto-favicon
@@ -28,9 +29,10 @@ Sources (technical):
 - https://github.com/michelson/lazy_high_charts
 - https://github.com/xiaods/highcharts-bootstrap
 - https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
-- http://www.highcharts.com/
+- http://www.highcharts.com/ (we used Highcharts extensively for our charts)
 - http://api.jquery.com/
 - http://forums.asp.net/
+- The Ruby Merit gem was used for achievements
 
 Inspirations:
 - http://www.apple.com/
@@ -42,6 +44,7 @@ Images:
 - http://www.flickr.com/photos/yellowstonenps
 
 Received help and/or advice from:
+- Course Staff
 - Predrag Gruevski
 - Bruno Faviero
 - Cosmos Darwin
@@ -51,5 +54,7 @@ Received help and/or advice from:
 - Bobby Hunt
 - Ian Gorodisher
 - Emma Benjaminson
+- Lauren Ferris
+- Alex Sloboda
 
 Usability testers:
