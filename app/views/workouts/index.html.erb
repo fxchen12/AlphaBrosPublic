@@ -8,18 +8,22 @@
     <!-- Main table to display workout rows -->
     <%= render '/layouts/dropdown' %>
 
-    <center>
-      <%= button_to "Record Workout", "javascript:;", :id => current_workout.id, :class => "record_button" %>
-    </center>
-    <!-- Overlay to display workout record entry form -->
-    <div class="workout_record" id="<%= current_workout.id %>" style="display:none;">
-      <%= render :partial => 'workout_records/form', :locals => { :workout => current_workout } %>
-    </div>
+    <% if current_workout != nil %>
+      <center>
+          <%= button_to "Record Workout", "javascript:;", :id => current_workout.id, :class => "record_button" %>
 
-    <!-- Overlay to display workout delete confirmation -->
-    <div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
-      <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
-    </div>
+      </center>
+
+      <!-- Overlay to display workout record entry form -->
+      <div class="workout_record" id="<%= current_workout.id %>" style="display:none;">
+        <%= render :partial => 'workout_records/form', :locals => { :workout => current_workout } %>
+      </div>
+
+      <!-- Overlay to display workout delete confirmation -->
+      <div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
+        <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
+      </div>
+    <% end %>
 
     <!-- Input field for new activity -->
     <div class="add_input" style="display:none;">

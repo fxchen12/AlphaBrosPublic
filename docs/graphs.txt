@@ -1,4 +1,9 @@
-Show all goals on a graph, with percentages achieved.
+1. Cumulative totals for time and distance, split by activity and total for time range (last 7 days, last 4 weeks, last 52 weeks, forever). (line graph)
 
-Total number of every day in a week, amount of exercise in a week, use different colors to show different amounts of exercise.
+1. Show all goals for an activity, with percentages complete (on dashboard). (simple bar graph)
 
+2. Time series column chart (time and distance) for every week in the past year, every day in the past month, every day in the past week, etc.
+
+3. Time and distance by exercise (percentage area) for various time periods.
+
+3. Time series of workout times and distances. (simple bar graph)

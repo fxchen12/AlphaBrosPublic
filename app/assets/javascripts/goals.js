@@ -19,6 +19,55 @@ $(function() {
             });
         });
     }
+
+    if ($("#graph").length) {
+        console.log("trying to generate graph");
+        console.log($('#graph').attr("class"));
+            $('#graph').highcharts({
+                chart: {
+                  type: 'bar',
+                  backgroundColor: {
+                  linearGradient: [0, 0, 500, 500],
+                  stops: [
+                    [0, 'rgba(250, 250, 250, .50)'],
+                    [1, 'rgba(250, 250, 250, .50)']
+                  ]
+                }
+                  },
+                  title: {
+                      text: null
+                  },
+                  xAxis: {
+                    categories: ['Percent']
+                  },
+                  yAxis: {
+                      min: 0,
+                      title: {
+                          text: null
+                      }
+                  },
+                  plotOptions: {
+                      bar: {
+                          stacking: 'percent'
+                      }
+                  },
+                  legend: {
+                    enabled: false
+                  },
+                  colors: [
+                    '#909090',
+                    '#006600'
+                  ],
+                  series: [{
+                      name: 'Incomplete',
+                      data: [100 - Number($('#graph').attr("class"))]
+                  },
+                   {
+                      name: 'Complete',
+                      data:[Number($('#graph').attr("class"))]
+                   }]
+                });
+        }
 });
 
 

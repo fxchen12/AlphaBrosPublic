@@ -1,0 +1,13 @@
+- Technically does not seem very complicated (just goals and graph)
+
+- Success dependent on UI aesthetic appeal and efficiency
+
+  "There are a lot of fitness apps with goals out there. What makes yours stand out?"
+  "Efficiency and aesthetic appeal."
+  "I'll quote you on that."
+
+- Killer features: goals, graphs, achievements
+  - Goals: goals graph on dashboard, goals section as is, really really polished
+  - Graphs: see graphs section. Idea: use colors for different days of the week and different months of the year.
+  - Achievements: organized into categories, have a summary button, achievement unlocked notification
+  - Custom buttons for the most important functions
