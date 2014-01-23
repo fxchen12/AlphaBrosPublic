@@ -6,7 +6,6 @@
     <%= render '/layouts/dropdown' %>
     <center>
       <%= button_to "All Workouts", "javascript:;", :class => "coolButton" %>
-      <%= duration_history_by_day(current_workout,2) %>
     </center>
     <table>
       <thead>
@@ -40,9 +39,10 @@
         <% end %>
       </tbody>
     </table>
+    Displaying 10 day history for this workout:
     <div id="progress_graph" height:700px>
     <script type="text/javascript" >
-      var progress_data = <%= raw [0,1,2,3,4,5].to_json %> ;
+      var progress_data = <%= history_by_time_period(current_workout,10,:duration,"day") %> ;
     </script>
 
   </div>
