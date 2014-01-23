@@ -54,7 +54,7 @@ module Merit
         end
         total >= 100
       end
-      
+
       grant_on 'workout_record#create', :badge => 'hours-1000', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
@@ -286,6 +286,51 @@ module Merit
       grant_on 'workout_record#create', :badge => 'yearly-hours-420', :to => :user do |workout_record|
         total = history_by_time_period(workout_record.workout, 1, :duration, "year")[0]
         total >= 420
+      end
+
+      grant_on 'workout_record#create', :badge => 'weekly-miles-10', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "week")[0]
+        total >= 10
+      end
+
+      grant_on 'workout_record#create', :badge => 'weekly-miles-15', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "week")[0]
+        total >= 15
+      end
+
+      grant_on 'workout_record#create', :badge => 'weekly-miles-20', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "week")[0]
+        total >= 20
+      end
+
+      grant_on 'workout_record#create', :badge => 'monthly-miles-50', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "month")[0]
+        total >= 50
+      end
+
+      grant_on 'workout_record#create', :badge => 'monthly-miles-75', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "month")[0]
+        total >= 75
+      end
+
+      grant_on 'workout_record#create', :badge => 'monthly-miles-100', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "month")[0]
+        total >= 100
+      end
+
+      grant_on 'workout_record#create', :badge => 'yearly-miles-600', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "year")[0]
+        total >= 600
+      end
+
+      grant_on 'workout_record#create', :badge => 'yearly-miles-900', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "year")[0]
+        total >= 900
+      end
+
+      grant_on 'workout_record#create', :badge => 'yearly-miles-1200', :to => :user do |workout_record|
+        total = history_by_time_period(workout_record.workout, 1, :distance, "year")[0]
+        total >= 1200
       end
 
 
