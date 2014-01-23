@@ -25,11 +25,7 @@
               <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
               </td>
               <td class="progress_bar">
-                <div id="graph" class="<%= get_current_progress(goal) %>" style="width:50%; height:100px;"></div>
-              </td>
-              <td class="progress">
-                <% current_progress = get_current_progress(goal) %>
-                <%= current_progress.to_s + '% complete' %>
+                <div id="<%= get_current_progress(goal) %>" class="graph" style="width:700px; height:100px;"></div>
               </td>
             </tr>
           <% end %>
