@@ -42,9 +42,10 @@
     </table>
     Displaying 10 day history for this workout:
     <div id="progress_graph" height:700px>
-    <script type="text/javascript" >
-      var progress_data = <%= history_by_time_period(current_workout,10,:duration,"day") %> ;
-    </script>
+      history_by_time_period(current_workout,10,:duration, "day")
+      <script type="text/javascript" >
+        var progress_data = <%= history_by_time_period(current_workout,10,:duration,"day") %> ;
+      </script>
     <% end %>
   </div>
 </div>
