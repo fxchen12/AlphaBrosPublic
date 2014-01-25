@@ -4,6 +4,7 @@ Sources (informational):
 - http://www.bodybuilding.com/
 - http://www.cbsnews.com/news/cdc-80-percent-of-american-adults-dont-get-recommended-exercise/
 - The Power of Habit by Charles Duhigg
+- Various online quote databases accessed through Google
 
 Sources (technical):
 - Course Resources (course site, Piazza, Git, etc.)
@@ -33,6 +34,7 @@ Sources (technical):
 - http://api.jquery.com/
 - http://forums.asp.net/
 - The Ruby Merit gem was used for achievements
+- heroku.com (hosting)
 
 Inspirations:
 - http://www.apple.com/
