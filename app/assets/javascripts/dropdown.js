@@ -9,13 +9,24 @@ $(function() {
             var id = $(this).attr('id');
             var del = $("body").find(".delete_confirmation#"+id);
             del.slideDown();
-            $(".dash_cover").fadeIn();
+            $(".cover").fadeIn();
         });
 
         $(".add_image").click(function() {
+            // $("body").find is necessary here. Do not change.
             var add = $("body").find(".add_input");
             add.slideDown();
-            $(".dash_cover").fadeIn();
+            $(".cover").fadeIn();
+        });
+
+        $(".cover").click(function() {
+            $(this).fadeOut();
+            $(".xbutton").parent().parent().slideUp();
+        });
+
+        $(".xbutton").click(function() {
+            $(".cover").fadeOut();
+            $(this).parent().parent().slideUp();
         });
     }
 });

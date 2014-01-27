@@ -56,4 +56,15 @@
   </td>
 </center>
 <% end %>
+
+<!-- Input field for new activity -->
+<div class="add_input" style="display:none;">
+  <%= render :partial => 'workouts/form' %>
+</div>
+
+<!-- Overlay to display workout delete confirmation -->
+<div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
+  <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
+</div>
+
 </div>

@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         @user = current_user
         ignore_flash = false
         # Check if only updating user's current workout
-        if params[:current_workout_id] != nil
+        if params[:current_workout_id] != @user.current_workout_id
             ignore_flash = true
         end
         if @user.update(update_params)

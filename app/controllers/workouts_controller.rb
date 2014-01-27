@@ -31,7 +31,7 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-    @workout.destroy
+    current_user.workouts.delete(@workout)
     if current_user.workouts.empty?
       current_user.update({:current_workout_id => nil})
     else

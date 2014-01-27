@@ -12,8 +12,9 @@
   <div class="xbutton">[x]</div>
   <center>
     Completed Workout: <%= workout.name %>
-    <%= f.text_field :duration, :size => 14, :placeholder => "Time (minutes)" %>
-    <%= f.text_field :distance, :size => 14, :placeholder => "Distance (miles)" %>
+    <!-- :value => "" clears the default 0 value so that the placeholder text shows -->
+    <%= f.text_field :duration, :size => 14, :placeholder => "Time (minutes)", :value => "" %>
+    <%= f.text_field :distance, :size => 14, :placeholder => "Distance (miles)", :value => "" %>
     <%= f.hidden_field :workout_id, :value => workout.id %>
 
     <%= f.submit "Record", data: { disable_with: 'Saving...' } %>

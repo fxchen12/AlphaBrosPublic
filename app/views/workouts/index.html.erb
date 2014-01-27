@@ -1,11 +1,9 @@
 <div class="dashboard_background">
-  <!-- Cover for overlay, invisible by default -->
-  <div class="dash_cover" style="display:none;"></div>
 
   <%= render '/layouts/navbar' %>
 
   <div class="dashboard_container">
-    <!-- Main table to display workout rows -->
+
     <%= render '/layouts/dropdown' %>
 
     <% if current_workout != nil %>
@@ -19,16 +17,7 @@
         <%= render :partial => 'workout_records/form', :locals => { :workout => current_workout } %>
       </div>
 
-      <!-- Overlay to display workout delete confirmation -->
-      <div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
-        <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
-      </div>
     <% end %>
-
-    <!-- Input field for new activity -->
-    <div class="add_input" style="display:none;">
-      <%= render :partial => 'workouts/form' %>
-    </div>
 
     <br>
   </div>

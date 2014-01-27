@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
 
     def index
+      @workout=Workout.new
       @workouts=Workout.all
       @goal=Goal.new
     end
