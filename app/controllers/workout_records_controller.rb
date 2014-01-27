@@ -8,7 +8,7 @@ class WorkoutRecordsController < ApplicationController
   def create
     @workout_record = WorkoutRecord.new(workout_record_params)
     @workout_record.user_id = current_user.id
-    
+
     if @workout_record.save and @workout_record.workout.user == current_user
       flash[:success] = "New workout record added!"
       redirect_to workouts_url
@@ -26,6 +26,6 @@ class WorkoutRecordsController < ApplicationController
   private
 
   def workout_record_params
-    params.require(:workout_record).permit(:duration, :distance, :workout_id)
+    params.require(:workout_record).permit(:duration, :distance, :date, :workout_id)
   end
 end

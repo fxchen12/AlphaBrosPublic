@@ -4,6 +4,7 @@ Sources (informational):
 - http://www.bodybuilding.com/
 - http://www.cbsnews.com/news/cdc-80-percent-of-american-adults-dont-get-recommended-exercise/
 - The Power of Habit by Charles Duhigg
+- Various online quote databases accessed through Google
 
 Sources (technical):
 - Course Resources (course site, Piazza, Git, etc.)
@@ -30,9 +31,11 @@ Sources (technical):
 - https://github.com/xiaods/highcharts-bootstrap (we didn't use this, but the site provided some helpful information)
 - https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 - http://www.highcharts.com/ (we used Highcharts extensively for our charts)
-- http://api.jquery.com/
+- http://jquery.com/
 - http://forums.asp.net/
 - The Ruby Merit gem was used for achievements
+- heroku.com (hosting)
+- http://jqueryui.com/
 
 Inspirations:
 - http://www.apple.com/

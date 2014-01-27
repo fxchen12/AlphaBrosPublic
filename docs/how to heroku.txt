@@ -1,0 +1,12 @@
+- To gain access to the heroku remote git:
+1. Create heroku account
+2. Download heroku toolbelt
+3. run 'heroku git:remote --app peaceful-basin-4110' on a bash
+
+- To recompile assets (needed when anything is changed in /assets folder or any links to an asset are changed):
+1. Delete /public/assets folder and tmp/cache/assets folder
+2. run 'RAILS_ENV=production bundle exec rake assets:precompile'
+3. git add public/assets
+4. git commit -am "precompile" (THE A IS IMPORTANT)
+5. git push heroku master
+6. No need to push to our git repo until everything works.
