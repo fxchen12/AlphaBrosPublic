@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122064556) do
+ActiveRecord::Schema.define(version: 20140127081545) do
 
   create_table "badges_sashes", force: true do |t|
     t.integer  "badge_id"
@@ -79,9 +79,9 @@ ActiveRecord::Schema.define(version: 20140122064556) do
     t.string   "remember_token"
     t.string   "name"
     t.string   "time_zone"
+    t.integer  "current_workout_id"
     t.integer  "sash_id"
     t.integer  "level",              default: 0
-    t.integer  "current_workout_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20140122064556) do
     t.integer  "distance",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "date"
   end
 
   add_index "workout_records", ["user_id"], name: "index_workout_records_on_user_id"

@@ -20,8 +20,8 @@ $(function() {
         });
     }
 
-    if ($(".graph").length) {
-        $('.graph').each(function()
+    if ($(".goal_graph").length) {
+        $('.goal_graph').each(function()
         {
             $(this).highcharts({
             chart: {
@@ -71,29 +71,3 @@ $(function() {
     }
 
 });
-
-
-// function applyGraphGradient() {
-
-//     // Options
-//     var threshold = 100,
-//         colorAbove = '#4572EE',
-//         colorBelow = '#EE4643';
-
-//     // internal
-//     var someSeries = this.series[0];
-
-//     $.each(someSeries.points, function(){
-//         if (this.y < threshold)
-//         {
-//            this.graphic.attr('fill', colorBelow);
-//         }
-//         else
-//         {
-//             this.graphic.attr('fill', colorAbove );
-//         }
-//     });
-
-//     delete someSeries.pointAttr.hover.fill;
-//     delete someSeries.pointAttr[''].fill;
-// }
