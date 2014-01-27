@@ -12,7 +12,7 @@ QUOTES = [
 "'If a man achieves victory over this body, who in the world can exercise power over him? He who rules himself rules over the whole world.' - Vinoba Bhave",
 "'Do not despise the bottom rungs in the ascent to greatness.' - Publilius Syrus",
 "'Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.' - St. Francis of Assisi",
-"'All glory comes from daring to begin' - Eugene Ware",
+"'All glory comes from daring to begin.' - Eugene Ware",
 "'The distance is nothing; it's only the first step that is difficult.' - Marquise du Deffand",
 "'A journey of a thousand miles must begin with a single step.' - Lao Tsu"
 

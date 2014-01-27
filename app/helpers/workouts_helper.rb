@@ -31,19 +31,19 @@ module WorkoutsHelper
 
     # Time range functions used by workout.sum_field_by_time_range
     def this_day(record)
-        record.created_at.to_date == Time.current.to_date
+        record.date == Date.today
     end
 
     def this_week(record)
-        (Time.current.to_date.beginning_of_week(:sunday)..Time.current.to_date) === record.created_at.to_date
+        (Date.today.beginning_of_week(:sunday)..Date.today) === record.date
     end
 
     def this_month(record)
-        (Time.current.to_date.beginning_of_month..Time.current.to_date) === record.created_at.to_date
+        (Date.today.beginning_of_month..Date.today) === record.date
     end
 
     def this_year(record)
-        (Time.current.to_date.beginning_of_year..Time.current.to_date) === record.created_at.to_date
+        (Date.today.beginning_of_year..Date.today) === record.date
     end
 
     def total(record)
@@ -61,19 +61,19 @@ module WorkoutsHelper
             multiplier = 365
         end
 
-        starting_time = Time.current.ago(number * 24 * 3600 * multiplier)
-        day_array = []
+        starting_date = Date.today.prev_day(number * multiplier).next_day
+        result_array = []
         number.times do
-            next_time = starting_time.since(24*3600 * multiplier)
-            day_sum = workout.sum_field_by_custom_time_range(metric, method(:check_range), starting_time, next_time)
-            day_array << day_sum
-            starting_time = starting_time.since(24*3600 * multiplier)
+            next_date = starting_date.next_day(multiplier).prev_day
+            result_sum = workout.sum_field_by_custom_time_range(metric, method(:check_range), starting_date, next_date)
+            result_array << result_sum
+            starting_date = starting_date.next_day(multiplier)
         end
-        return day_array
+        return result_array
     end
 
-    def check_range(start_time,end_time,record)
-        ((start_time.to_date..end_time.to_date) === record.created_at.to_date)
+    def check_range(start_date,end_date,record)
+        ((start_date..end_date) === record.date)
     end
 
 end
