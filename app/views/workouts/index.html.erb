@@ -13,27 +13,39 @@
           <%= button_to "Record Workout", "javascript:;", :id => current_workout.id, :class => "record_button" %>
       </center>
 
-      <% current_user.workout_records.each do |w| %>
-          <tr>
-            <td><%= w.created_at %></td>
-            <td><%= w.date %><br></td>
-          </tr>
-        <% end %>
-
       <table class="dashboard_table">
         <tbody>
           <tr class="chart_row">
           </tr>
             <td>
-              <div id="dashboard_goals" height=1000px width=1000px></div>
+              <% if current_workout.goals[0] != nil %>
+                <table>
+                  <tbody>
+                    <% current_workout.goals.each do |goal| %>
+                      <tr>
+                        <td class="dashboard_goal_statement"> <%= goal.number %> <%= goal.metric %> / <%= goal.time_range %>
+                        </td>
+                        <td class="progress_bar">
+                          <div id="<%= get_current_progress(goal) %>" class="dashboard_goal_graph" style="width:500px; height:100px;"></div>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+            <% end %>
             </td>
             <td>
-              <div id="dashboard progress"></div>
+              <div id="dashboard_progress_graph" width=500px height=700px></div>
+              <script type="text/javascript" >
+                var dashboard_progress_data = <%= history_by_time_period(current_workout,7,:duration,"day") %> ;
+              </script>
             </td>
           <tr class="link row">
             <td>
+              <%= link_to "Goals", '/goals' %>
             </td>
             <td>
+              <%= link_to "Progress", '/progress' %>
             </td>
           </tr>
         </tbody>

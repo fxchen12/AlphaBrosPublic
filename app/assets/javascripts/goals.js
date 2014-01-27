@@ -20,8 +20,8 @@ $(function() {
         });
     }
 
-    if ($(".graph").length) {
-        $('.graph').each(function()
+    if ($(".goal_graph").length) {
+        $('.goal_graph').each(function()
         {
             $(this).highcharts({
             chart: {

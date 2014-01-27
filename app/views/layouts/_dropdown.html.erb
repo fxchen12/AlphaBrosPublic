@@ -21,7 +21,7 @@
 
             <center>
               <% if current_workout != nil %>
-                My Current Activity:<br>
+                Current Activity<br>
                 <%= form_for(current_user, :html => {:id => 'dropdown_form'}) do |f| %>
                   <%= f.select :current_workout_id, options_for_select(options, current_workout.id)
                   %>
