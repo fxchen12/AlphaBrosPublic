@@ -26,5 +26,53 @@ $(function() {
             $(this).parent().parent().parent().parent().slideUp();
         });
 
+
+        if ($("#dashboard_goals").length) {
+            $('#dashboard_goals').highcharts({
+                chart: {
+                  type: 'bar',
+                  backgroundColor: {
+                  linearGradient: [0, 0, 500, 500],
+                  stops: [
+                    [0, 'rgba(250, 250, 250, .50)'],
+                    [1, 'rgba(250, 250, 250, .50)']
+                  ]
+                }
+                  },
+                  title: {
+                      text: 'Goals for This Activity'
+                  },
+                  xAxis: {
+                    categories: ['Percent']
+                  },
+                  yAxis: {
+                      min: 0,
+                      title: {
+                          text: null
+                      }
+                  },
+                  plotOptions: {
+                      bar: {
+                          stacking: 'percent'
+                      }
+                  },
+                  legend: {
+                    enabled: false
+                  },
+                  colors: [
+                    '#909090',
+                    '#006600'
+                  ],
+                  series: [{
+                      name: 'Incomplete',
+                      data: [30,50,70]
+                  },
+                   {
+                      name: 'Complete',
+                      data:[70,50,30]
+                   }]
+                });
+            }
     }
+
 });

@@ -14,6 +14,7 @@
     Completed Workout: <%= workout.name %>
     <%= f.text_field :duration, :size => 14, :placeholder => "Time (minutes)" %>
     <%= f.text_field :distance, :size => 14, :placeholder => "Distance (miles)" %>
+    <%= f.text_field :date, :size => 14, :value => Date.today.strftime("%Y-%m-%d") %>
     <%= f.hidden_field :workout_id, :value => workout.id %>
 
     <%= f.submit "Record", data: { disable_with: 'Saving...' } %>

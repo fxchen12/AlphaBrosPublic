@@ -11,8 +11,33 @@
     <% if current_workout != nil %>
       <center>
           <%= button_to "Record Workout", "javascript:;", :id => current_workout.id, :class => "record_button" %>
-
       </center>
+
+      <% current_user.workout_records.each do |w| %>
+          <tr>
+            <td><%= w.created_at %></td>
+            <td><%= w.date %><br></td>
+          </tr>
+        <% end %>
+
+      <table class="dashboard_table">
+        <tbody>
+          <tr class="chart_row">
+          </tr>
+            <td>
+              <div id="dashboard_goals" height=1000px width=1000px></div>
+            </td>
+            <td>
+              <div id="dashboard progress"></div>
+            </td>
+          <tr class="link row">
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <!-- Overlay to display workout record entry form -->
       <div class="workout_record" id="<%= current_workout.id %>" style="display:none;">
