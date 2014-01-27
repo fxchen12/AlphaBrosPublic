@@ -83,8 +83,26 @@ $(function() {
             type: 'column'
         },
         series: [{
-            name: 'Minutes',
+            name: 'Minutes For This Activity',
             data: dashboard_progress_data
+        },
+        {
+            name: 'Minutes For All Activities',
+            data: dashboard_total_data
+        }]
+        });
+    }
+
+    if ($("#dashboard_cumulative_graph").length) {
+
+        $('#dashboard_cumulative_graph').highcharts({
+        series: [{
+            name: 'Minutes For This Activity',
+            data: dashboard_cumulative_progress_data
+        },
+        {
+            name: 'Minutes For All Activities',
+            data: dashboard_cumulative_total_data
         }]
         });
     }
