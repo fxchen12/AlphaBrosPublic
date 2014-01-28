@@ -13,9 +13,10 @@
   <center>
     Completed Workout: <%= workout.name %>
     <!-- :value => "" clears the default 0 value so that the placeholder text shows -->
+     <%= f.text_field :date, :size => 14, :value => Date.today.strftime("%Y-%m-%d") %>
     <%= f.text_field :duration, :size => 14, :placeholder => "Time (minutes)", :value => "" %>
     <%= f.text_field :distance, :size => 14, :placeholder => "Distance (miles)", :value => "" %>
-    <%= f.text_field :date, :size => 14, :value => Date.today.strftime("%Y-%m-%d") %>
+   
 
     <%= f.hidden_field :workout_id, :value => workout.id %>
 

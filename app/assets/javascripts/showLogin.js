@@ -3,19 +3,19 @@ $(function() {
     if($("#loginBox").length) {
 
         $("#loginButton").click(function() {
+            $("#cover").fadeIn();
             $("#loginBox").slideDown();
-            $(".cover").fadeIn();
             $("#session_email").focus();
         });
 
-        $(".cover").click(function() {
+        $("#cover").click(function() {
             $("#loginBox").slideUp();
-            $(".cover").fadeOut();
+            $("#cover").fadeOut();
         });
 
         $(".xbutton").click(function() {
             $("#loginBox").slideUp();
-            $(".cover").fadeOut();
+            $("#cover").fadeOut();
         });
 
         $(".slow_scroll").click(function() {
