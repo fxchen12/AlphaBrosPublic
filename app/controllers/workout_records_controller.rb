@@ -3,6 +3,22 @@ class WorkoutRecordsController < ApplicationController
   def index
     @workout = Workout.new
     @workouts = current_user.workouts
+    @metric = "Time"
+    if params[:metric]
+      @metric = params[:metric]
+    end
+    @range = "Past 7 Days"
+    if params[:time]
+      @range = params[:time][:range]
+    end
+    @field = @metric
+    if @metric == "Time"
+      @field = "Duration"
+    end
+    @unit = "Minutes"
+    if @metric == "Distance"
+      @unit = "Miles"
+    end
   end
 
   def create

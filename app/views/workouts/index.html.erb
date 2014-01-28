@@ -36,13 +36,13 @@
             </td>
             <td class="progress_half">
               <div id="dashboard_progress_graph" style="width:95%; height:400px;"></div>
-              <script type="text/javascript" >
+              <script type="text/javascript">
                 var dashboard_progress_data = <%= history_by_time_period(current_workout,7,:duration,"day") %> ;
                 var dashboard_total_data = <%= history_by_time_period_all(7,:duration,"day") %> ;
               </script>
               <br>
               <div id="dashboard_cumulative_graph" style="width:95%; height:400px;"></div>
-              <script type="text/javascript" >
+              <script type="text/javascript">
                 var dashboard_cumulative_progress_data = <%= cumulative_history_by_time_period(current_workout,7,:duration,"day") %> ;
                 var dashboard_cumulative_total_data = <%= cumulative_history_by_time_period_all(7,:duration,"day") %> ;
               </script>
