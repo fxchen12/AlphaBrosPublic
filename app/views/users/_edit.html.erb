@@ -20,6 +20,16 @@
             <%= f.submit "Update Name", data: { disable_with: 'Saving...' } %>
           <% end %>
         </div>
+        <br>
+        <div id="time_zone">
+          <%= form_for(@user) do |f| %>
+
+            <%= f.label :time_zone, "Time Zone" %>
+            <%= f.select :time_zone, TIME_ZONES %>
+
+            <%= f.submit "Update Time Zone", data: { disable_with: 'Saving...' } %>
+          <% end %>
+        </div>
       </td>
 
       <td id="password">
