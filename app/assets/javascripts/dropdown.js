@@ -17,6 +17,7 @@ $(function() {
             var add = $("body").find(".add_input");
             add.slideDown();
             $(".cover").fadeIn();
+            $("#workout_name").focus();
         });
 
         $(".cover").click(function() {
@@ -29,6 +30,7 @@ $(function() {
             $(this).parent().parent().slideUp();
         });
 
+        // Not currently used
         $(".cancel_button").click(function() {
             $(".cover").fadeOut();
             $(".xbutton").parent().parent().slideUp();
