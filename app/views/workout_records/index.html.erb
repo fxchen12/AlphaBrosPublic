@@ -6,8 +6,10 @@
     <%= render '/layouts/dropdown' %>
 
     <% if current_workout != nil %>
+      <div class="forms">
+        <center>
       <form id="metric_form">
-        <%= radio_button_tag("metric", "Time", @metric == "Time") %>Time<br>
+        <%= radio_button_tag("metric", "Time", @metric == "Time") %>Time
         <%= radio_button_tag("metric", "Distance", @metric == "Distance") %>Distance<br>
         <input type="submit" style="display:none;"></input>
       </form>
@@ -16,6 +18,8 @@
         <%= select("time", "range", options_for_select(["Past 7 Days", "Past 14 Days", "Past 4 Weeks", "Past 6 Months", "Past 12 Months"], @range)) %>
         <input type="submit" style="display:none;"></input>
       </form>
+    </center>
+    </div>
 
       <table>
         <tbody>
@@ -43,6 +47,10 @@
         var range_combo = "<%= @range.split[1] + ' ' + @range.split.last.delete('s') %>" ;
       </script>
     <% end %>
+    <div class="progress_summary">
+      You have recorded a total of <%= record_totals[current_workout][4].to_i %> minutes and <%= record_totals[current_workout][9].to_i %> miles with this activity. <br>
+
+      Across all activites, you have recorded a total of <%= record_overall_total[4].to_i %> minutes and <%= record_overall_total[9].to_i %> miles.
   </div>
-</div>
+  </div>
 </div>

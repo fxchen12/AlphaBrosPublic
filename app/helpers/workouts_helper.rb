@@ -55,7 +55,7 @@ module WorkoutsHelper
                 end
             end
         end
-        return workout_hash
+        return result_array
     end
 
     # Time range functions used by workout.sum_field_by_time_range
