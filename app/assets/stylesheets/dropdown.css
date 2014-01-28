@@ -19,3 +19,34 @@ div.cover
   opacity: 0.65;
   z-index: 100;
 }
+
+td.delete_button
+{
+  vertical-align:bottom;
+  text-align:right;
+}
+
+td.add_button
+{
+  vertical-align:bottom;
+  text-align:left;
+}
+
+img.add_image
+{
+  width:auto;
+  height:auto;
+  cursor:pointer;
+}
+
+td.dropdown
+{
+  width:350px;
+  vertical-align:middle;
+}
+
+table.dropdown_table
+{
+  height:100px;
+  width:100%;
+}

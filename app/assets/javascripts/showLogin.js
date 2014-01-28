@@ -3,8 +3,8 @@ $(function() {
     if($("#loginBox").length) {
 
         $("#loginButton").click(function() {
-            $(".cover").fadeIn();
             $("#loginBox").slideDown();
+            $(".cover").fadeIn();
             $("#session_email").focus();
         });
 
