@@ -18,6 +18,7 @@ Merit::Badge.create! ({
     name: "registered",
     level: 1,
     description: "Started My Journey",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -25,6 +26,7 @@ Merit::Badge.create! ({
     name: "workout",
     level: 1,
     description: "Completed First Workout",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -32,6 +34,7 @@ Merit::Badge.create! ({
     name: "daily-goal",
     level: 1,
     description: "Completed a Daily Goal",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -39,6 +42,7 @@ Merit::Badge.create! ({
     name: "weekly-goal",
     level: 1,
     description: "Completed a Weekly Goal",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -46,6 +50,7 @@ Merit::Badge.create! ({
     name: "monthly-goal",
     level: 2,
     description: "Completed a Monthly Goal",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -53,6 +58,7 @@ Merit::Badge.create! ({
     name: "yearly-goal",
     level: 3,
     description: "Completed a Yearly Goal",
+    custom_fields: { cat: :Firsts }
 })
 
 Merit::Badge.create! ({
@@ -60,6 +66,7 @@ Merit::Badge.create! ({
     name: "workout-10",
     level: 1,
     description: "Completed 10 Workouts",
+    custom_fields: { cat: :Workouts }
 })
 
 Merit::Badge.create! ({
@@ -67,6 +74,7 @@ Merit::Badge.create! ({
     name: "workout-25",
     level: 2,
     description: "Completed 25 Workouts",
+    custom_fields: { cat: :Workouts }
 })
 
 Merit::Badge.create! ({
@@ -74,6 +82,7 @@ Merit::Badge.create! ({
     name: "workout-50",
     level: 3,
     description: "Completed 50 Workouts",
+    custom_fields: { cat: :Workouts }
 })
 
 Merit::Badge.create! ({
@@ -81,6 +90,7 @@ Merit::Badge.create! ({
     name: "daily-goal-10",
     level: 2,
     description: "Completed 10 Daily Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -88,6 +98,7 @@ Merit::Badge.create! ({
     name: "daily-goal-25",
     level: 2,
     description: "Completed 25 Daily Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -95,6 +106,7 @@ Merit::Badge.create! ({
     name: "daily-goal-50",
     level: 3,
     description: "Completed 50 Daily Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -102,6 +114,7 @@ Merit::Badge.create! ({
     name: "weekly-goal-3",
     level: 2,
     description: "Completed 3 Weekly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -109,6 +122,7 @@ Merit::Badge.create! ({
     name: "weekly-goal-10",
     level: 2,
     description: "Completed 10 Weekly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -116,6 +130,7 @@ Merit::Badge.create! ({
     name: "weekly-goal-25",
     level: 3,
     description: "Completed 25 Weekly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -123,6 +138,7 @@ Merit::Badge.create! ({
     name: "monthly-goal-2",
     level: 2,
     description: "Completed 2 Monthly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -130,6 +146,7 @@ Merit::Badge.create! ({
     name: "monthly-goal-6",
     level: 3,
     description: "Completed 6 Monthly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -137,6 +154,7 @@ Merit::Badge.create! ({
     name: "monthly-goal-12",
     level: 3,
     description: "Completed 12 Monthly Goals",
+    custom_fields: { cat: :Goals }
 })
 
 Merit::Badge.create! ({
@@ -144,6 +162,7 @@ Merit::Badge.create! ({
     name: "hours-10",
     level: 1,
     description: "10 Hours of Exercise",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -151,6 +170,8 @@ Merit::Badge.create! ({
     name: "hours-100",
     level: 2,
     description: "100 Hours of Exercise",
+    custom_fields: { cat: :Time }
+
 })
 
 Merit::Badge.create! ({
@@ -158,6 +179,7 @@ Merit::Badge.create! ({
     name: "hours-1000",
     level: 3,
     description: "1000 Hours of Exercise",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -165,6 +187,7 @@ Merit::Badge.create! ({
     name: "weekly-hours-3",
     level: 1,
     description: "3 Hours in a Week",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -172,6 +195,7 @@ Merit::Badge.create! ({
     name: "weekly-hours-5",
     level: 2,
     description: "5 Hours in a Week",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -179,6 +203,7 @@ Merit::Badge.create! ({
     name: "weekly-hours-7",
     level: 3,
     description: "7 Hours in a Week",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -186,6 +211,7 @@ Merit::Badge.create! ({
     name: "monthly-hours-15",
     level: 1,
     description: "15 Hours in a Month",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -193,6 +219,7 @@ Merit::Badge.create! ({
     name: "monthly-hours-25",
     level: 2,
     description: "25 Hours in a Month",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -200,6 +227,7 @@ Merit::Badge.create! ({
     name: "monthly-hours-35",
     level: 3,
     description: "35 Hours in a Month",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -207,6 +235,7 @@ Merit::Badge.create! ({
     name: "yearly-hours-180",
     level: 2,
     description: "180 Hours in a Year",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -214,6 +243,7 @@ Merit::Badge.create! ({
     name: "yearly-hours-300",
     level: 3,
     description: "300 Hours in a Year",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -221,6 +251,7 @@ Merit::Badge.create! ({
     name: "yearly-hours-420",
     level: 3,
     description: "420 Hours in a Year",
+    custom_fields: { cat: :Time }
 })
 
 Merit::Badge.create! ({
@@ -228,6 +259,7 @@ Merit::Badge.create! ({
     name: "miles-10",
     level: 1,
     description: "10 Miles Exercising",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -235,6 +267,7 @@ Merit::Badge.create! ({
     name: "miles-100",
     level: 2,
     description: "100 Miles Exercising",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -242,6 +275,7 @@ Merit::Badge.create! ({
     name: "miles-1000",
     level: 3,
     description: "1000 Miles Exercising",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -249,6 +283,7 @@ Merit::Badge.create! ({
     name: "weekly-miles-10",
     level: 1,
     description: "10 Miles in a Week",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -256,6 +291,7 @@ Merit::Badge.create! ({
     name: "weekly-miles-15",
     level: 2,
     description: "15 Miles in a Week",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -263,6 +299,7 @@ Merit::Badge.create! ({
     name: "weekly-miles-20",
     level: 3,
     description: "20 Miles in a Week",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -270,6 +307,7 @@ Merit::Badge.create! ({
     name: "monthly-miles-50",
     level: 2,
     description: "50 Miles in a Month",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -277,6 +315,7 @@ Merit::Badge.create! ({
     name: "monthly-miles-75",
     level: 2,
     description: "75 Miles in a Month",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -284,6 +323,7 @@ Merit::Badge.create! ({
     name: "monthly-miles-100",
     level: 3,
     description: "100 Miles in a Month",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -291,6 +331,7 @@ Merit::Badge.create! ({
     name: "yearly-miles-600",
     level: 2,
     description: "600 Miles in a Year",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -298,6 +339,7 @@ Merit::Badge.create! ({
     name: "yearly-miles-900",
     level: 3,
     description: "900 Miles in a Year",
+    custom_fields: { cat: :Distance }
 })
 
 Merit::Badge.create! ({
@@ -305,4 +347,5 @@ Merit::Badge.create! ({
     name: "yearly-miles-1200",
     level: 3,
     description: "1200 Miles in a Year",
+    custom_fields: { cat: :Distance }
 })

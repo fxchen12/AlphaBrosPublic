@@ -36,6 +36,7 @@ Sources (technical):
 - The Ruby Merit gem was used for achievements
 - heroku.com (hosting)
 - http://jqueryui.com/
+- https://tinypng.com/
 
 Inspirations:
 - http://www.apple.com/
