@@ -23,17 +23,38 @@ table.dashboard_table
   width:100%;
 }
 
+.dashboard_goal_statement
+{
+  font-size:12pt;
+  padding-bottom:25px;
+}
+
 img.delete_image
 {
   width:auto;
   height:auto;
   cursor:pointer;
 }
-td.progress_row{
-  width:500px;
-  padding-left:12px;
-  padding-right:12px;
-  padding-top:30px;
+
+td.goal_half
+{
+  width:50%;
+  vertical-align:top;
+  padding-right:50px;
+}
+
+div#goal_title
+{
+  text-align: center;
+  font-family:"Lucida Sans Unicode";
+  font-size: 16px;
+  color:#274b6d;
+}
+
+td.progress_half
+{
+  padding-top:6px;
+  width:50%;
 }
 
 div.dashboard_progress_graph{
@@ -43,7 +64,7 @@ div.delete_confirmation
 {
   position: absolute;
   top: 11%;
-  left: 38%;
+  left: 39%;
   margin-top: 40px;
   width: 24%;
   padding: 15px;
@@ -53,6 +74,15 @@ div.delete_confirmation
   border-radius: .25em;
   line-height: 125%;
   z-index: 110;
+}
+
+.record_button
+{
+  cursor:pointer;
+  margin-top:-20px;
+  margin-right: 33px;
+  margin-bottom:30px;
+  vertical-align: middle;
 }
 
 div.add_input
@@ -91,7 +121,7 @@ input[value="Record Workout"]
 {
   padding-top:0em;
   height:3em;
-  width:15em;
+  width:13.3em;
 }
 
 td.start_button
