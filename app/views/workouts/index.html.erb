@@ -31,7 +31,7 @@
                 </table>
             <% end %>
             </td>
-            <td>
+            <td class="progress_row">
               <div id="dashboard_progress_graph" width=500px height=700px></div>
               <script type="text/javascript" >
                 var dashboard_progress_data = <%= history_by_time_period(current_workout,7,:duration,"day") %> ;

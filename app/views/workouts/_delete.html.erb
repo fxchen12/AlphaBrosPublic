@@ -1,9 +1,10 @@
 <div id="delete_form">
   <div class="xbutton">[x]</div>
-
+  <div class="delete_lower">
   <center>
     Are you sure you want to remove this workout?
   </center>
   <%= button_to "Ok", workout, :method => :delete, :size => 15 %>
   <%= button_to "Cancel", "javascript:;", :class => "cancel_button" %>
+</div>
 </div>

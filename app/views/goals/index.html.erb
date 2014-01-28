@@ -4,39 +4,43 @@
   <div class='goals_container'>
     <%= render '/layouts/dropdown' %>
     <% if current_workout != nil %>
-    <center>
-      <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "goal_button" %>
-    </center>
-    <% if current_workout.goals[0] != nil %>
-      <table>
-        <tbody>
-          <% current_workout.goals.each do |goal| %>
-            <tr>
-              <td class="goal_delete_button">
-              <%=
-                image_tag("delete_button_gray.png",
-                  :onmouseover => "this.src=" + asset_path('delete_button_red.png'),
-                  :onmouseout => "this.src=" + asset_path('delete_button_gray.png'),
-                  :class => "delete_image_goals",
-                  :id => current_user.current_workout_id
-                )
-              %>
-              </td>
-              <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
-              </td>
-              <td class="progress_bar">
-                <div id="<%= get_current_progress(goal) %>" class="goal_graph" style="width:700px; height:100px;"></div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    <% end %>
+      <center>
+        <%= button_to "Set New Goal", "javascript:;", :id => current_workout.id, :class => "goal_button" %>
+      </center>
+      <% if current_workout.goals[0] != nil %>
+        <table class="goal_main_table">
+          <tbody>
+            <% current_workout.goals.each do |goal| %>
+              <tr>
+                <td class="goal_delete_button">
+                <%=
+                  image_tag("delete_button_gray.png",
+                  :onmouseover => "this.src='" + asset_path('delete_button_red.png') + "'",
+                  :onmouseout => "this.src='" + asset_path('delete_button_gray.png') + "'",
+                  :class => "goal_delete_image",
+                  :id => goal.id
+                  )
+                %>
+                </td>
+                <td class="goal_statement"> I will do this exercise for <%= goal.number %> <%= goal.metric %> every <%= goal.time_range %>.
+                </td>
+                <td class="progress_bar">
+                  <div id="<%= get_current_progress(goal) %>" class="goal_graph" style="width:700px; height:100px;"></div>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <% current_workout.goals.each do |goal| %>
+          <div class="goal_delete_confirmation" id="<%= goal.id %>" style="display:none;">
+          <%= render :partial => 'goals/delete', :locals => { :goal => goal } %>
+          </div>
+        <% end %>
+      <% end %>
 
-    <div class="workout_goals" id="<%= current_workout.id %>" style="display:none;">
-        <%= render :partial => 'goals/form', :locals => { :workout => current_workout } %>
-    </div>
-    <br>
+      <div class="workout_goals" id="<%= current_workout.id %>" style="display:none;">
+          <%= render :partial => 'goals/form', :locals => { :workout => current_workout } %>
+      </div>
     <% end %>
   </div>
 </div>

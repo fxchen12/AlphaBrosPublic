@@ -18,6 +18,23 @@ $(function() {
                 form.hide();
             });
         });
+
+        $(".goal_delete_image").click(function() {
+            var id = $(this).attr('id');
+            var del = $("body").find(".goal_delete_confirmation#"+id);
+            del.slideDown();
+            $(".cover").fadeIn();
+        });
+
+        $(".cover").click(function() {
+            $(this).fadeOut();
+            $(".xbutton").parent().parent().slideUp();
+        });
+
+        $(".xbutton").click(function() {
+            $(".cover").fadeOut();
+            $(this).parent().parent().slideUp();
+        });
     }
 
     if ($(".goal_graph").length) {
@@ -29,8 +46,8 @@ $(function() {
               backgroundColor: {
               linearGradient: [0, 0, 500, 500],
               stops: [
-                [0, 'rgba(250, 250, 250, .50)'],
-                [1, 'rgba(250, 250, 250, .50)']
+                [0, 'rgba(255, 255, 255, 0)'],
+                [1, 'rgba(255, 255, 255, 0)']
               ]
             }
               },
@@ -38,7 +55,11 @@ $(function() {
                   text: null
               },
               xAxis: {
-                categories: ['Percent']
+                categories: ['']
+
+              },
+              tooltip: {
+                headerFormat:"Percent "
               },
               yAxis: {
                   min: 0,

@@ -28,5 +28,10 @@ $(function() {
             $(".cover").fadeOut();
             $(this).parent().parent().slideUp();
         });
+
+        $(".cancel_button").click(function() {
+            $(".cover").fadeOut();
+            $(".xbutton").parent().parent().slideUp();
+        });
     }
 });

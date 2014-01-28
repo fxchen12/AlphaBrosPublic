@@ -4,7 +4,8 @@ class Goal < ActiveRecord::Base
 
     validates_presence_of :workout_id
     validates_numericality_of :number, :only_integer => true, :allow_nil => false,
-        :message => "Target value must be entered as a whole number"
+        :greater_than => 0,
+        :message => "Target number must be entered as a positive integer."
 
     include GoalsHelper
 

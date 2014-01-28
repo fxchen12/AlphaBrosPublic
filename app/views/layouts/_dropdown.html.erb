@@ -42,18 +42,22 @@
         </tr>
     </tbody>
   </table>
+  <!-- Overlay to display workout delete confirmation -->
+  <div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
+    <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
+  </div>
 <% else %>
 <center>
-  No workouts available. Add a workout to get started!
+  No activities available. Add an activity to get started!
   <br>
   <td class="add_button">
-    <%=
-      image_tag("add_button_gray.png",
-        :onmouseover => "this.src=" + asset_path('add_button_green.png'),
-        :onmouseout => "this.src=" + asset_path('add_button_gray.png'),
-        :class => "add_image"
-      )
-    %>
+            <%=
+              image_tag("add_button_gray.png",
+                :onmouseover => "this.src='" + asset_path('add_button_green.png') + "'",
+                :onmouseout => "this.src='" + asset_path('add_button_gray.png') + "'",
+                :class => "add_image"
+              )
+            %>
   </td>
 </center>
 <% end %>
@@ -61,11 +65,6 @@
 <!-- Input field for new activity -->
 <div class="add_input" style="display:none;">
   <%= render :partial => 'workouts/form' %>
-</div>
-
-<!-- Overlay to display workout delete confirmation -->
-<div class="delete_confirmation" id="<%= current_workout.id %>" style="display:none;">
-  <%= render :partial => 'workouts/delete', :locals => { :workout => current_workout } %>
 </div>
 
 </div>

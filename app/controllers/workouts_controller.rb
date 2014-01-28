@@ -15,10 +15,10 @@ class WorkoutsController < ApplicationController
 
     if @workout.save
       current_user.update({:current_workout_id => @workout.id})
-      redirect_to workouts_url, notice: 'New workout added!'
+      redirect_to :back, notice: 'New workout added!'
     else
       flash[:error] = "Workout failed to save."
-      render :index
+      redirect_to :back
     end
   end
 
@@ -37,7 +37,7 @@ class WorkoutsController < ApplicationController
     else
       current_user.update({:current_workout_id => current_user.workouts[0].id})
     end
-    redirect_to :workouts
+    redirect_to :back
   end
 
   private

@@ -17,21 +17,46 @@ table.goals_top_table
   width:100%;
 }
 
+img.goal_delete_image
+{
+  width:auto;
+  height:auto;
+  cursor:pointer;
+}
+
+table.goal_main_table
+{
+  width:100%;
+}
 
 td.goals_empty
 {
   width:auto;
 }
 
-td.main_button
+td.goal_delete_button
 {
-  width:350px;
+  padding-left:12px;
+  padding-right:12px;
+  vertical-align:middle;
+}
+
+td.goal_statement
+{
+  vertical-align:middle;
+  padding-bottom:12px;
+}
+
+td.progress_bar
+{
+  padding-top:7px;
+  vertical-align:middle;
 }
 
 div.goals_container
 {
   color:#404040;
-  background-color:rgba(255,255,255,0.70);
+  background-color:rgba(255,255,255,0.80);
 }
 
 td.goals_workout_name
@@ -58,10 +83,20 @@ td.progress
   width:200px;
   margin-top:-20px;
   margin-right: 33px;
-  margin-bottom:50px;
+  margin-bottom:30px;
   vertical-align: middle;
 
 }
+
+.new_goal input,
+.new_goal label,
+.new_goal select,
+.new_goal input[type="submit"]
+{
+  display:inline-block;
+  margin-top:15px;
+}
+
 
 div.workout_goals
 {
@@ -83,4 +118,25 @@ input[value="Set New Goal"]
   padding-top:0em;
   height:3em;
   width:13.3em;
+}
+
+div.goal_delete_confirmation
+{
+  position: absolute;
+  top: 11%;
+  left: 38%;
+  margin-top: 40px;
+  width: 24%;
+  padding: 15px;
+  padding-bottom: 60px;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: .25em;
+  line-height: 125%;
+  z-index: 110;
+}
+
+.goal_delete_lower
+{
+  margin-top:10pt;
 }
