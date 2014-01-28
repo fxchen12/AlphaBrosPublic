@@ -19,6 +19,9 @@
 module Merit
   class BadgeRules
     include Merit::BadgeRulesMethods
+    include GoalsHelper
+    include WorkoutsHelper
+    include SessionsHelper
 
     def initialize
       # If it creates user, grant badge
@@ -39,50 +42,62 @@ module Merit
         workout_record.user.workout_records.count >= 50
       end
 
-      grant_on 'workout_record#create', :badge => 'hours-10', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'hours-10', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.duration / 60.0)
+          if r.duration != nil
+            total += (r.duration / 60.0)
+          end
         end
         total >= 10
       end
 
-      grant_on 'workout_record#create', :badge => 'hours-100', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'hours-100', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.duration / 60.0)
+          if r.duration != nil
+            total += (r.duration / 60.0)
+          end
         end
         total >= 100
       end
 
-      grant_on 'workout_record#create', :badge => 'hours-1000', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'hours-1000', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.duration / 60.0)
+          if r.duration != nil
+            total += (r.duration / 60.0)
+          end
         end
         total >= 1000
       end
 
-      grant_on 'workout_record#create', :badge => 'miles-10', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'miles-10', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.distance)
+          if r.distance != nil
+            total += (r.distance)
+          end
         end
         total >= 10
       end
 
-      grant_on 'workout_record#create', :badge => 'miles-100', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'miles-100', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.distance)
+          if r.distance != nil
+            total += (r.distance)
+          end
         end
         total >= 100
       end
 
-      grant_on 'workout_record#create', :badge => 'miles-1000', :to => :user do |workout_record|
+      grant_on 'workout_records#create', :badge => 'miles-1000', :to => :user do |workout_record|
         total = 0
         workout_record.user.workout_records.each do |r|
-          total += (r.distance)
+          if r.distance != nil
+            total += (r.distance)
+          end
         end
         total >= 1000
       end
@@ -91,7 +106,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "day"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -103,7 +118,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "day"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -115,7 +130,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "day"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -127,7 +142,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "day"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -139,7 +154,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "week"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -151,7 +166,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "week"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -163,7 +178,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "week"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -175,7 +190,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "week"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -187,7 +202,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "month"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -199,7 +214,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "month"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -211,7 +226,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "month"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -223,7 +238,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "month"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
@@ -235,7 +250,7 @@ module Merit
         total = 0
         workout_record.workout.goals.each do |g|
           if g.time_range == "year"
-            if get_current_progress(workout_record.workout, g) >= 100
+            if get_current_progress(g) >= 100
               total += 1
             end
           end
