@@ -4,43 +4,43 @@
 
   <div class="progress_container">
     <%= render '/layouts/dropdown' %>
+
     <% if current_workout != nil %>
-    <table>
-      <thead>
-        <tr>
-          <th>Workout</th>
-          <th colspan="5">Time</th>
-          <th colspan="5">Distance</th>
-        </tr>
-        <tr class="subhead">
-          <th></th>
-          <th>Today</th>
-          <th>This Week</th>
-          <th>This Month</th>
-          <th>This Year</th>
-          <th>Total</th>
-          <th>Today</th>
-          <th>This Week</th>
-          <th>This Month</th>
-          <th>This Year</th>
-          <th>Total</th>
-      </thead>
-      <tbody>
-        <!-- See WorkoutsHelper for record_totals functionality -->
-        <% record_totals.each do |w,a| %>
-          <tr>
-            <td><%= w.name %></td>
-            <% for i in (0..10) %>
-            <td><%= a[i] %></td>
-            <% end %>
+      <form id="metric_form">
+        <%= radio_button_tag("metric", "Time", @metric == "Time") %>Time<br>
+        <%= radio_button_tag("metric", "Distance", @metric == "Distance") %>Distance<br>
+        <input type="submit" style="display:none;"></input>
+      </form>
+
+      <form id="time_range_form">
+        <%= select("time", "range", options_for_select(["Past 7 Days", "Past 14 Days", "Past 4 Weeks", "Past 6 Months", "Past 12 Months"], @range)) %>
+        <input type="submit" style="display:none;"></input>
+      </form>
+
+      <table>
+        <tbody>
+          <tr style="width:100%">
+            <td>
+              <div id="progress_graph" style="width:50%; height:450px;"></div>
+            </td>
+            <td>
+              <div id="progress_cumulative_graph" style="width:50%; height:450px;"></div>
+            </td>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-    Displaying 10 day history for this workout:
-    <div id="progress_graph" height:700px></div>
-      <script type="text/javascript" >
-        var progress_data = <%= history_by_time_period(current_workout,10,:duration,"day") %> ;
+        </tbody>
+      </table>
+
+
+      <script type="text/javascript">
+        var dashboard_progress_data = <%= history_by_time_period(current_workout, @range.split[1].to_i, @field.downcase.to_sym, @range.split.last.delete('s').downcase) %> ;
+        var dashboard_total_data = <%= history_by_time_period_all(@range.split[1].to_i, @field.downcase.to_sym, @range.split.last.delete('s').downcase) %> ;
+        var dashboard_cumulative_progress_data = <%= cumulative_history_by_time_period(current_workout, @range.split[1].to_i, @field.downcase.to_sym, @range.split.last.delete('s').downcase) %> ;
+        var dashboard_cumulative_total_data = <%= cumulative_history_by_time_period_all(@range.split[1].to_i, @field.downcase.to_sym, @range.split.last.delete('s').downcase) %> ;
+        var descending_range = <%= (@range.split[1].to_i - 1).downto(-1).to_json %>;
+        var x_text = "<%= @range.split.last.delete('s') + "(s) ago" %>" ;
+        var y_text = "<%= @unit %>" ;
+        var range_word = "<%= @range.split.last.delete('s').downcase %>" ;
+        var range_combo = "<%= @range.split[1] + ' ' + @range.split.last.delete('s') %>" ;
       </script>
     <% end %>
   </div>
