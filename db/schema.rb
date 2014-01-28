@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127081545) do
+ActiveRecord::Schema.define(version: 20140128151816) do
 
   create_table "badges_sashes", force: true do |t|
     t.integer  "badge_id"
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 20140127081545) do
     t.integer  "user_id"
     t.integer  "workout_id"
     t.integer  "duration",   default: 0
-    t.integer  "distance",   default: 0
+    t.decimal  "distance",   default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "date"
