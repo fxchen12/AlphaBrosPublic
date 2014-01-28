@@ -30,8 +30,8 @@ $(function() {
               backgroundColor: {
               linearGradient: [0, 0, 500, 500],
               stops: [
-                [0, 'rgba(250, 250, 250, .50)'],
-                [1, 'rgba(250, 250, 250, .50)']
+                [0, 'rgba(250, 250, 250, 0)'],
+                [1, 'rgba(250, 250, 250, 0)']
               ]
             }
               },
@@ -39,7 +39,10 @@ $(function() {
                   text: null
               },
               xAxis: {
-                categories: ['%']
+                categories: ['']
+              },
+              tooltip: {
+                headerFormat:"Percent "
               },
               yAxis: {
                   min: 0,
@@ -75,14 +78,39 @@ $(function() {
 
         $('#dashboard_progress_graph').highcharts({
         chart: {
-            type: 'column'
+            type: 'column',
+            backgroundColor: {
+              linearGradient: [0, 0, 500, 500],
+              stops: [
+                [0, 'rgba(250, 250, 250, 0)'],
+                [1, 'rgba(250, 250, 250, 0)']
+              ]
+            }
+        },
+        title: {
+          text: '7 Day History'
+        },
+        xAxis: {
+          categories: [6, 5, 4, 3, 2, 1, 0],
+          title: {
+            text: 'Day(s) Ago'
+          }
+        },
+        tooltip: {
+          headerFormat:"{point.key} day(s) ago<br>"
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Minutes'
+            }
         },
         series: [{
-            name: 'Minutes For This Activity',
+            name: 'Current Activity',
             data: dashboard_progress_data
         },
         {
-            name: 'Minutes For All Activities',
+            name: 'All Activities',
             data: dashboard_total_data
         }]
         });
