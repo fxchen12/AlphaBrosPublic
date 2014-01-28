@@ -39,6 +39,13 @@ img.add_image
   cursor:pointer;
 }
 
+img.delete_image
+{
+  width:auto;
+  height:auto;
+  cursor:pointer;
+}
+
 td.dropdown
 {
   width:350px;
