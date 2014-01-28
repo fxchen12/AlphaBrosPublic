@@ -21,11 +21,6 @@ $(function() {
             $("#workout_record_duration").focus();
         });
 
-        $(".cancel_button").click(function() {
-            $(".cover").fadeOut();
-            $(this).parent().parent().parent().parent().slideUp();
-        });
-
     if ($(".dashboard_goal_graph").length) {
         $('.dashboard_goal_graph').each(function()
         {
