@@ -37,6 +37,7 @@ Sources (technical):
 - heroku.com (hosting)
 - http://jqueryui.com/
 - https://tinypng.com/
+- www.websiteoptimization.com
 
 Inspirations:
 - http://www.apple.com/
