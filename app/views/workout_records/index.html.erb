@@ -25,10 +25,10 @@
         <tbody>
           <tr style="width:100%">
             <td>
-              <div id="progress_graph" style="width:50%; height:450px;"></div>
+              <div id="progress_graph" style="width:49%; height:450px;"></div>
             </td>
             <td>
-              <div id="progress_cumulative_graph" style="width:50%; height:450px;"></div>
+              <div id="progress_cumulative_graph" style="width:49%; height:450px;"></div>
             </td>
           </tr>
         </tbody>
@@ -48,9 +48,12 @@
       </script>
     <% end %>
     <div class="progress_summary">
+      <strong>
       You have recorded a total of <%= record_totals[current_workout][4].to_i %> minutes and <%= record_totals[current_workout][9].to_i %> miles with this activity. <br>
 
-      Across all activites, you have recorded a total of <%= record_overall_total[4].to_i %> minutes and <%= record_overall_total[9].to_i %> miles.
-  </div>
+      Across all activities, you have recorded a total of <%= record_overall_total[4].to_i %> minutes and <%= record_overall_total[9].to_i %> miles.
+      </strong>
+    </div>
+    <br>
   </div>
 </div>
