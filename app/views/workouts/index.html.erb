@@ -15,6 +15,9 @@
         <tbody>
           <tr class="chart_row">
             <td class="goal_half">
+              <div id="goal_title">
+                Goals for this Activity
+              </div>
               <% if current_workout.goals[0] != nil %>
                 <table class="dashboard_table">
                   <tbody>
@@ -43,15 +46,6 @@
                 var dashboard_cumulative_progress_data = <%= cumulative_history_by_time_period(current_workout,7,:duration,"day") %> ;
                 var dashboard_cumulative_total_data = <%= cumulative_history_by_time_period_all(7,:duration,"day") %> ;
               </script>
-            </td>
-          </tr>
-
-          <tr class="link row">
-            <td>
-              <%= link_to "Goals", '/goals' %>
-            </td>
-            <td>
-              <%= link_to "Progress", '/progress' %>
             </td>
           </tr>
         </tbody>

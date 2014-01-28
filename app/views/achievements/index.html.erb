@@ -1,11 +1,13 @@
 <div class="achievements_background">
   <%= render '/layouts/navbar' %>
   <div class="achievements_container">
-
-    <form id="category_form">
-      <%= select("category", "name", options_for_select(["Firsts", "Workouts", "Goals", "Time", "Distance"], @name)) %>
-      <input type="submit" style="display:none;"></input>
-    </form>
+    <center>
+      Category
+      <form id="category_form">
+        <%= select("category", "name", options_for_select(["Firsts", "Workouts", "Goals", "Time", "Distance"], @name)) %>
+        <input type="submit" style="display:none;"></input>
+      </form>
+    </center>
 
     <table class="achievements_table">
       <tbody>

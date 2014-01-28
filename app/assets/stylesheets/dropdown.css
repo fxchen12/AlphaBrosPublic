@@ -4,6 +4,12 @@
   font-size:20pt;
 }
 
+#category_name
+{
+  width:300px;
+  font-size:20pt;
+}
+
 div.cover
 {
   position: fixed;
@@ -19,12 +25,14 @@ div.cover
 td.delete_button
 {
   vertical-align:bottom;
+  padding-bottom:3px;
   text-align:right;
 }
 
 td.add_button
 {
   vertical-align:bottom;
+  padding-bottom:3px;
   text-align:left;
 }
 
